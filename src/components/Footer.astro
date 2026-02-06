@@ -1,0 +1,106 @@
+---
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-secondary text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <div class="col-span-1 md:col-span-2">
+        <span
+          class="text-2xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text text-transparent mb-4 block"
+        >
+          Techsity
+        </span>
+        <p class="text-gray-400 max-w-sm leading-relaxed mb-6">
+          Somos tu socio tecnológico estratégico. Creamos soluciones digitales
+          que impulsan el crecimiento y la innovación.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all"
+          >
+            <Linkedin class="w-5 h-5" />
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all"
+          >
+            <Twitter class="w-5 h-5" />
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all"
+          >
+            <Github class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-6">Enlaces Rápidos</h3>
+        <ul class="space-y-4">
+          <li>
+            <a
+              href="#inicio"
+              class="text-gray-400 hover:text-white transition-colors">Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#servicios"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              href="#nosotros"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="contacto">
+        <h3 class="text-lg font-semibold mb-6">Contacto</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start space-x-3 text-gray-400">
+            <Mail class="w-5 h-5 mt-0.5" />
+            <span>hola@techsity.com</span>
+          </li>
+          <li class="flex items-start space-x-3 text-gray-400">
+            <Phone class="w-5 h-5 mt-0.5" />
+            <span>+57 (123) 456-7890</span>
+          </li>
+          <li class="flex items-start space-x-3 text-gray-400">
+            <MapPin class="w-5 h-5 mt-0.5" />
+            <span>Medellín, Colombia</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
+    >
+      <p>
+        &copy; {currentYear} Techsity Solutions. Todos los derechos reservados.
+      </p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white transition-colors">Privacidad</a>
+        <a href="#" class="hover:text-white transition-colors">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>

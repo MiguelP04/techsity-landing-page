@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Brand Colors */
+  --color-primary: #80b918; /* Verde */
+  --color-secondary: #0d3385; /* Azul */
+  --color-accent: #32779c; /* Azul Cyan */
+
+  /* Text & UI Colors */
+  --color-paragraph: #8592a5; /* Gris oscuro para párrafos */
+  --color-paragraph-light: #adb5bd;
+  --color-field: #ced4da; /* Gris claro para campos/bordes */
+}
