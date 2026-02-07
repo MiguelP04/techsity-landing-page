@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import Services from "../components/Services.astro";
 import Footer from "../components/Footer.astro";
+import TestimonialCarousel from "../components/TestimonialCarousel.astro";
 import { Check } from "lucide-astro";
 ---
 
@@ -61,6 +62,14 @@ import { Check } from "lucide-astro";
               </li>
             </ul>
           </div>
+        </div>
+
+        <!-- Testimonios de Desarrolladores -->
+        <div class="mt-20 pt-16 border-t border-white/10">
+          <h3 class="text-2xl font-bold text-center mb-12">
+            Conoce a Nuestro Equipo
+          </h3>
+          <TestimonialCarousel />
         </div>
       </div>
     </section>
