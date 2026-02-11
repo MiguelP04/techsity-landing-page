@@ -1,5 +1,7 @@
 ---
 import { Menu } from "lucide-astro";
+import { Image } from "astro:assets";
+import logo from "../assets/logo_transparent_small.svg";
 ---
 
 <nav
@@ -8,11 +10,26 @@ import { Menu } from "lucide-astro";
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <div class="flex-shrink-0 flex items-center">
-        <a
-          href="/"
-          class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
-        >
-          Techsity
+        <a href="/" class="text-2xl font-bold flex items-center gap-0.5">
+          <span
+            class="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
+          >
+            Tech
+          </span>
+
+          <Image
+            src={logo}
+            alt="Logo Techsity"
+            width={25}
+            height={25}
+            class="w-auto h-[1em] inline-block"
+          />
+
+          <span
+            class="bg-linear-to-r from-secondary to-primary bg-clip-text text-transparent"
+          >
+            ity
+          </span>
         </a>
       </div>
 
@@ -30,7 +47,12 @@ import { Menu } from "lucide-astro";
         <a
           href="#nosotros"
           class="text-gray-600 hover:text-primary transition-colors font-medium"
-          >Nosotros</a
+          >Sobre nosotros</a
+        >
+        <a
+          href="#por-que-elegirnos"
+          class="text-gray-600 hover:text-primary transition-colors font-medium"
+          >¿Por qué elegirnos?</a
         >
         <a
           href="#contacto"
