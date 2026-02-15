@@ -33,13 +33,13 @@
     <!-- Form Container -->
     <div class="bg-white rounded-2xl shadow-2xl shadow-primary/10 p-8 md:p-12">
       <form id="contact-form" class="space-y-6">
-        <!-- Nombre Completo -->
+        <!-- Nombre o Nombre de Empresa -->
         <div class="form-group">
           <label
             for="nombre"
             class="block text-sm font-semibold text-secondary mb-2"
           >
-            Nombre Completo <span class="text-primary">*</span>
+            Nombre o Nombre de Empresa <span class="text-primary">*</span>
           </label>
           <input
             type="text"
@@ -48,7 +48,7 @@
             required
             minlength="3"
             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
-            placeholder="Juan Pérez"
+            placeholder="Juan Pérez o TechCorp Solutions"
           />
           <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
         </div>
@@ -110,12 +110,26 @@
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-white"
             >
               <option value="">Selecciona una opción</option>
-              <option value="desarrollo-web">🌐 Desarrollo Web</option>
-              <option value="apps-moviles">📱 Aplicaciones Móviles</option>
-              <option value="consultoria">💼 Consultoría Tecnológica</option>
-              <option value="transformacion-digital"
-                >🚀 Transformación Digital</option
+              <option value="desarrollo-web"
+                >🌐 Desarrollo Web Personalizado</option
               >
+              <option value="apps-moviles">📱 Aplicaciones Móviles</option>
+              <option value="planificacion-proyectos"
+                >🧠Planificación de Proyectos Tecnológicos</option
+              >
+              <option value="optimizacion-bd"
+                >🗄️ Optimización de Bases de Datos</option
+              >
+              <option value="automatizacion"
+                >🤖 Automatización de Procesos</option
+              >
+              <option value="integracion-ia"
+                >🧠 Integración de Inteligencia Artificial</option
+              >
+              <option value="migracion-sistemas"
+                >🔄 Migración y Modernización de Sistemas</option
+              >
+              <option value="consultoria">💼 Consultoría Tecnológica</option>
               <option value="mantenimiento">🔧 Mantenimiento y Soporte</option>
               <option value="diseno-ux">🎨 Diseño UX/UI</option>
             </select>
@@ -128,21 +142,73 @@
               for="presupuesto"
               class="block text-sm font-semibold text-secondary mb-2"
             >
-              Presupuesto Estimado <span class="text-primary">*</span>
+              Presupuesto Estimado (USD) <span class="text-primary">*</span>
+            </label>
+            <div class="relative">
+              <span
+                class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-semibold text-lg"
+                >$</span
+              >
+              <input
+                type="number"
+                id="presupuesto"
+                name="presupuesto"
+                required
+                min="100"
+                step="1"
+                class="w-full pl-8 pr-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                placeholder="1000"
+              />
+            </div>
+            <p id="presupuesto-hint" class="text-xs text-gray-500 mt-1">
+              Presupuesto mínimo: $100 USD
+            </p>
+            <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
+          </div>
+        </div>
+
+        <!-- Plazo del Proyecto y Sitio Web -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Plazo del Proyecto -->
+          <div class="form-group">
+            <label
+              for="plazo"
+              class="block text-sm font-semibold text-secondary mb-2"
+            >
+              Plazo Estimado <span class="text-gray-400 text-xs"
+                >(opcional)</span
+              >
             </label>
             <select
-              id="presupuesto"
-              name="presupuesto"
-              required
+              id="plazo"
+              name="plazo"
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-white"
             >
-              <option value="">Selecciona un rango</option>
-              <option value="menos-5k">💰 Menos de $5,000</option>
-              <option value="5k-15k">💵 $5,000 - $15,000</option>
-              <option value="15k-30k">💸 $15,000 - $30,000</option>
-              <option value="mas-30k">🏆 Más de $30,000</option>
-              <option value="a-definir">🤝 A definir según proyecto</option>
+              <option value="">Selecciona un plazo</option>
+              <option value="urgente">⚡ Urgente (menos de 1 mes)</option>
+              <option value="1-3-meses">📅 1-3 meses</option>
+              <option value="3-6-meses">🗓️ 3-6 meses</option>
+              <option value="mas-6-meses">⏳ Más de 6 meses</option>
+              <option value="flexible">🌊 Flexible</option>
             </select>
+            <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
+          </div>
+
+          <!-- Sitio Web -->
+          <div class="form-group">
+            <label
+              for="sitioWeb"
+              class="block text-sm font-semibold text-secondary mb-2"
+            >
+              Sitio Web <span class="text-gray-400 text-xs">(opcional)</span>
+            </label>
+            <input
+              type="url"
+              id="sitioWeb"
+              name="sitioWeb"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+              placeholder="https://www.ejemplo.com"
+            />
             <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
           </div>
         </div>
@@ -345,6 +411,18 @@
         isValid = false;
         errorMsg = "Por favor ingresa un email válido";
       }
+    } else if (field.type === "number" && field.value) {
+      const value = parseFloat(field.value);
+      const min = parseFloat(field.getAttribute("min") || "0");
+      const isDisabled = (field as HTMLInputElement).disabled;
+
+      if (value <= 0) {
+        isValid = false;
+        errorMsg = "El presupuesto debe ser mayor a $0";
+      } else if (!isDisabled && value < min) {
+        isValid = false;
+        errorMsg = `El presupuesto mínimo es de $${min} USD`;
+      }
     } else if (field.getAttribute("minlength")) {
       const minLength = parseInt(field.getAttribute("minlength") || "0");
       if (field.value.length < minLength) {
@@ -378,6 +456,52 @@
     field.addEventListener("blur", () => {
       validateField(field as HTMLInputElement);
     });
+  });
+
+  // Handle consultancy fixed price
+  const tipoServicioSelect = document.getElementById(
+    "tipoServicio",
+  ) as HTMLSelectElement;
+  const presupuestoInput = document.getElementById(
+    "presupuesto",
+  ) as HTMLInputElement;
+
+  tipoServicioSelect?.addEventListener("change", () => {
+    const presupuestoHint = document.getElementById(
+      "presupuesto-hint",
+    ) as HTMLParagraphElement;
+
+    if (tipoServicioSelect.value === "consultoria") {
+      // Auto-fill with $60 and lock the field
+      presupuestoInput.value = "60";
+      presupuestoInput.disabled = true;
+      presupuestoInput.classList.add("bg-gray-100", "cursor-not-allowed");
+
+      // Hide the $100 minimum hint
+      if (presupuestoHint) presupuestoHint.classList.add("hidden");
+
+      // Clear any error messages
+      const formGroup = presupuestoInput.closest(".form-group");
+      const errorSpan = formGroup?.querySelector(
+        ".error-message",
+      ) as HTMLSpanElement;
+      if (errorSpan) {
+        errorSpan.classList.add("hidden");
+      }
+      presupuestoInput.classList.remove("border-red-500");
+      presupuestoInput.classList.add("border-gray-300");
+    } else {
+      // Unlock the field and clear the value
+      presupuestoInput.disabled = false;
+      presupuestoInput.classList.remove("bg-gray-100", "cursor-not-allowed");
+
+      // Show the $100 minimum hint
+      if (presupuestoHint) presupuestoHint.classList.remove("hidden");
+
+      if (presupuestoInput.value === "60") {
+        presupuestoInput.value = "";
+      }
+    }
   });
 
   // Form submission con EmailJS
