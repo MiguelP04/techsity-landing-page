@@ -1,105 +1,148 @@
 ---
-import { Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-astro";
+import { Linkedin, Github, Instagram, Mail, Phone, MapPin } from "lucide-astro";
+import { Image } from "astro:assets";
+import logo from "../assets/logo_transparent_small.svg";
 
 const currentYear = new Date().getFullYear();
+
+const quickLinks = [
+  { name: "Inicio", href: "#inicio" },
+  { name: "Servicios", href: "#servicios" },
+  { name: "Sobre Nosotros", href: "#nosotros" },
+  { name: "¿Por qué elegirnos?", href: "#por-que-elegirnos" },
+  { name: "Contacto", href: "#contacto" },
+];
+
+const socials = [
+  { Icon: Linkedin, href: "#", label: "LinkedIn" },
+  {
+    Icon: Instagram,
+    href: "https://www.instagram.com/techsity_oficial/?igsh=1",
+    label: "Instagram",
+  },
+  { Icon: Github, href: "#", label: "GitHub" },
+];
 ---
 
-<footer class="bg-secondary text-white pt-16 pb-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-      <div class="col-span-1 md:col-span-2">
-        <span
-          class="text-2xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text text-transparent mb-4 block"
-        >
-          Techsity
-        </span>
-        <p class="text-gray-400 max-w-sm leading-relaxed mb-6">
+<footer class="bg-secondary text-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Brand column -->
+      <div>
+        <a href="/" class="text-2xl font-bold flex items-center gap-0.5 mb-5">
+          <span
+            class="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent"
+          >
+            Tech
+          </span>
+          <Image
+            src={logo}
+            alt="Logo Techsity"
+            width={25}
+            height={25}
+            class="w-auto h-[1em] inline-block"
+          />
+          <span
+            class="bg-linear-to-r from-accent to-primary bg-clip-text text-transparent"
+          >
+            ity
+          </span>
+        </a>
+        <p class="text-paragraph leading-relaxed text-sm max-w-xs mb-6">
           Somos tu socio tecnológico estratégico. Creamos soluciones digitales
-          que impulsan el crecimiento y la innovación.
+          que impulsan el crecimiento y la innovación de tu empresa.
         </p>
-        <div class="flex space-x-4">
-          <a
-            href="#"
-            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all"
-          >
-            <Linkedin class="w-5 h-5" />
-          </a>
-          <a
-            href="#"
-            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all"
-          >
-            <Twitter class="w-5 h-5" />
-          </a>
-          <a
-            href="#"
-            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all"
-          >
-            <Github class="w-5 h-5" />
-          </a>
+        <div class="flex space-x-3">
+          {
+            socials.map(({ Icon, href, label }) => (
+              <a
+                href={href}
+                aria-label={label}
+                target={href !== "#" ? "_blank" : undefined}
+                rel={href !== "#" ? "noopener noreferrer" : undefined}
+                class="size-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+              >
+                <Icon class="size-5" />
+              </a>
+            ))
+          }
         </div>
       </div>
 
+      <!-- Quick Links column -->
       <div>
-        <h3 class="text-lg font-semibold mb-6">Enlaces Rápidos</h3>
+        <h4 class="text-sm font-semibold tracking-wider text-white mb-6">
+          Navegación
+        </h4>
         <ul class="space-y-4">
-          <li>
-            <a
-              href="#inicio"
-              class="text-gray-400 hover:text-white transition-colors">Inicio</a
-            >
-          </li>
-          <li>
-            <a
-              href="#servicios"
-              class="text-gray-400 hover:text-white transition-colors"
-              >Servicios</a
-            >
-          </li>
-          <li>
-            <a
-              href="#nosotros"
-              class="text-gray-400 hover:text-white transition-colors"
-              >Nosotros</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contacto"
-              class="text-gray-400 hover:text-white transition-colors"
-              >Contacto</a
-            >
-          </li>
+          {
+            quickLinks.map(({ name, href }) => (
+              <li>
+                <a
+                  href={href}
+                  class="text-paragraph hover:text-primary transition-colors text-sm"
+                >
+                  {name}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
-      <div id="contacto">
-        <h3 class="text-lg font-semibold mb-6">Contacto</h3>
+      <!-- Contact column -->
+      <div>
+        <h4 class="text-sm font-semibold tracking-wider text-white mb-6">
+          Contacto
+        </h4>
         <ul class="space-y-4">
-          <li class="flex items-start space-x-3 text-gray-400">
-            <Mail class="w-5 h-5 mt-0.5" />
-            <span>hola@techsity.com</span>
+          <li>
+            <a
+              href="mailto:hola@techsity.com"
+              class="flex items-center space-x-3 text-paragraph hover:text-primary transition-colors group"
+            >
+              <Mail
+                class="size-5 shrink-0 group-hover:text-primary transition-colors"
+              />
+              <span class="text-sm">hola@techsity.com</span>
+            </a>
           </li>
-          <li class="flex items-start space-x-3 text-gray-400">
-            <Phone class="w-5 h-5 mt-0.5" />
-            <span>+57 (123) 456-7890</span>
+          <li>
+            <a
+              href="https://wa.me/584246209421?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center space-x-3 text-paragraph hover:text-primary transition-colors group"
+            >
+              <Phone
+                class="size-5 shrink-0 group-hover:text-primary transition-colors"
+              />
+              <span class="text-sm">+58 424 620 9421</span>
+            </a>
           </li>
-          <li class="flex items-start space-x-3 text-gray-400">
-            <MapPin class="w-5 h-5 mt-0.5" />
-            <span>Medellín, Colombia</span>
+          <li class="flex items-center space-x-3 text-paragraph">
+            <MapPin class="size-5 shrink-0" />
+            <span class="text-sm">Falcón, Venezuela</span>
           </li>
         </ul>
       </div>
     </div>
 
+    <!-- Bottom bar -->
     <div
-      class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
+      class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-paragraph"
     >
       <p>
         &copy; {currentYear} Techsity Solutions. Todos los derechos reservados.
       </p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <a href="#" class="hover:text-white transition-colors">Privacidad</a>
-        <a href="#" class="hover:text-white transition-colors">Términos</a>
+      <div class="flex items-center space-x-6">
+        <a href="#" class="hover:text-primary transition-colors"
+          >Política de Privacidad</a
+        >
+        <span class="text-white/20">|</span>
+        <a href="#" class="hover:text-primary transition-colors"
+          >Términos de Servicio</a
+        >
       </div>
     </div>
   </div>
