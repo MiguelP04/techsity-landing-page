@@ -33,7 +33,7 @@ import logo from "../assets/logo_transparent_small.svg";
         </a>
       </div>
 
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden lg:flex items-center space-x-8">
         <a
           href="#inicio"
           class="text-gray-600 hover:text-primary transition-colors font-medium"
@@ -68,45 +68,179 @@ import logo from "../assets/logo_transparent_small.svg";
       </div>
 
       <!-- Mobile menu button -->
-      <div class="md:hidden flex items-center">
+      <div class="lg:hidden flex items-center">
         <button
-          class="mobile-menu-button p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none"
+          class="mobile-menu-button p-2 rounded-lg text-gray-600 hover:text-primary hover:bg-primary/10 transition-all duration-300 focus:outline-none"
+          aria-label="Abrir menú"
         >
           <Menu class="h-6 w-6" />
         </button>
       </div>
     </div>
   </div>
-
-  <!-- Mobile menu -->
-  <div
-    class="mobile-menu hidden md:hidden bg-white border-t border-gray-100 absolute w-full"
-  >
-    <a
-      href="#inicio"
-      class="block py-3 px-4 text-sm hover:bg-gray-50 text-gray-700">Inicio</a
-    >
-    <a
-      href="#servicios"
-      class="block py-3 px-4 text-sm hover:bg-gray-50 text-gray-700"
-      >Servicios</a
-    >
-    <a
-      href="#nosotros"
-      class="block py-3 px-4 text-sm hover:bg-gray-50 text-gray-700">Nosotros</a
-    >
-    <a
-      href="#contacto"
-      class="block py-3 px-4 text-sm hover:bg-gray-50 text-gray-700">Contacto</a
-    >
-  </div>
 </nav>
+
+<!-- Mobile menu overlay (fuera del nav para evitar herencia de transparencia) -->
+<div
+  class="mobile-overlay fixed inset-0 bg-black/40 backdrop-blur-sm z-60 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+>
+</div>
+
+<!-- Mobile menu panel (fuera del nav) -->
+<div
+  class="mobile-menu fixed top-0 right-0 w-[85%] max-w-sm h-full bg-white shadow-2xl z-70 transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden"
+>
+  <!-- Close button -->
+  <div
+    class="flex items-center justify-between px-6 h-16 border-b border-gray-100"
+  >
+    <a href="/" class="text-xl font-bold flex items-center gap-0.5">
+      <span
+        class="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
+        >Tech</span
+      >
+      <Image
+        src={logo}
+        alt="Logo Techsity"
+        width={20}
+        height={20}
+        class="w-auto h-[1em] inline-block"
+      />
+      <span
+        class="bg-linear-to-r from-secondary to-primary bg-clip-text text-transparent"
+        >ity</span
+      >
+    </a>
+    <button
+      class="mobile-menu-close w-10 h-10 flex items-center justify-center rounded-lg text-gray-500 hover:text-red-500 hover:bg-red-50 transition-all duration-300"
+      aria-label="Cerrar menú"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Links -->
+  <nav class="px-4 py-6">
+    <div class="space-y-1">
+      <a
+        href="#inicio"
+        class="mobile-link flex items-center gap-3 py-3.5 px-4 rounded-xl text-gray-700 font-medium hover:bg-primary/10 hover:text-primary transition-all duration-400 opacity-0 translate-x-8"
+        style="transition-delay: 100ms"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+        Inicio
+      </a>
+      <a
+        href="#servicios"
+        class="mobile-link flex items-center gap-3 py-3.5 px-4 rounded-xl text-gray-700 font-medium hover:bg-primary/10 hover:text-primary transition-all duration-400 opacity-0 translate-x-8"
+        style="transition-delay: 150ms"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+        Servicios
+      </a>
+      <a
+        href="#nosotros"
+        class="mobile-link flex items-center gap-3 py-3.5 px-4 rounded-xl text-gray-700 font-medium hover:bg-primary/10 hover:text-primary transition-all duration-400 opacity-0 translate-x-8"
+        style="transition-delay: 200ms"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+        Sobre Nosotros
+      </a>
+      <a
+        href="#por-que-elegirnos"
+        class="mobile-link flex items-center gap-3 py-3.5 px-4 rounded-xl text-gray-700 font-medium hover:bg-primary/10 hover:text-primary transition-all duration-400 opacity-0 translate-x-8"
+        style="transition-delay: 250ms"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+        ¿Por qué elegirnos?
+      </a>
+      <a
+        href="#contacto"
+        class="mobile-link flex items-center gap-3 py-3.5 px-4 rounded-xl text-gray-700 font-medium hover:bg-primary/10 hover:text-primary transition-all duration-400 opacity-0 translate-x-8"
+        style="transition-delay: 300ms"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+        Contacto
+      </a>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="mt-8 px-4">
+      <a
+        href="#contacto"
+        class="mobile-link flex items-center justify-center w-full py-3.5 rounded-full bg-linear-to-r from-primary to-accent text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-xl hover:scale-[1.02] transition-all duration-400 opacity-0 translate-x-8"
+        style="transition-delay: 400ms"
+      >
+        Empezar Ahora
+      </a>
+    </div>
+  </nav>
+</div>
 
 <script>
   const btn = document.querySelector("button.mobile-menu-button");
-  const menu = document.querySelector(".mobile-menu");
+  const closeBtn = document.querySelector("button.mobile-menu-close");
+  const menu = document.querySelector(".mobile-menu") as HTMLElement;
+  const overlay = document.querySelector(".mobile-overlay") as HTMLElement;
+  const mobileLinks = document.querySelectorAll(".mobile-link");
 
-  btn?.addEventListener("click", () => {
-    menu?.classList.toggle("hidden");
+  function openMenu() {
+    // Slide panel in
+    menu?.classList.remove("translate-x-full");
+    menu?.classList.add("translate-x-0");
+
+    // Show overlay
+    overlay?.classList.remove("opacity-0", "pointer-events-none");
+    overlay?.classList.add("opacity-100", "pointer-events-auto");
+
+    // Trigger stagger animation on links
+    requestAnimationFrame(() => {
+      mobileLinks.forEach((link) => {
+        link.classList.remove("opacity-0", "translate-x-8");
+        link.classList.add("opacity-100", "translate-x-0");
+      });
+    });
+
+    // Prevent body scroll
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    // Slide panel out
+    menu?.classList.add("translate-x-full");
+    menu?.classList.remove("translate-x-0");
+
+    // Hide overlay
+    overlay?.classList.add("opacity-0", "pointer-events-none");
+    overlay?.classList.remove("opacity-100", "pointer-events-auto");
+
+    // Reset link animations
+    mobileLinks.forEach((link) => {
+      link.classList.add("opacity-0", "translate-x-8");
+      link.classList.remove("opacity-100", "translate-x-0");
+    });
+
+    // Re-enable body scroll
+    document.body.style.overflow = "";
+  }
+
+  btn?.addEventListener("click", openMenu);
+  closeBtn?.addEventListener("click", closeMenu);
+  overlay?.addEventListener("click", closeMenu);
+
+  // Close menu when clicking a link
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 </script>
