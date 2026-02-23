@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
 
@@ -17,4 +22,62 @@
   --color-paragraph-light: #adb5bd;
   --color-field: #ced4da;
   /* Gris claro para campos/bordes */
+}
+
+/* Animations: Scroll Reveal System */
+.reveal {
+  opacity: 0;
+  /* Custom startup easing: similar to Framer Motion's default spring */
+  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Variants */
+.reveal.fade-in {
+  transform: translateY(0);
+}
+
+.reveal.slide-up {
+  transform: translateY(40px);
+}
+
+.reveal.slide-down {
+  transform: translateY(-40px);
+}
+
+.reveal.slide-left {
+  transform: translateX(-150px);
+}
+
+.reveal.slide-right {
+  transform: translateX(150px);
+}
+
+/* Delay modifiers */
+.reveal.delay-100 {
+  transition-delay: 100ms;
+}
+.reveal.delay-200 {
+  transition-delay: 200ms;
+}
+.reveal.delay-300 {
+  transition-delay: 300ms;
+}
+.reveal.delay-400 {
+  transition-delay: 400ms;
+}
+.reveal.delay-500 {
+  transition-delay: 500ms;
+}
+.reveal.delay-600 {
+  transition-delay: 600ms;
+}
+.reveal.delay-700 {
+  transition-delay: 700ms;
+}
+
+/* The trigger state added by JS */
+.reveal.active {
+  opacity: 1;
+  transform: translate(0, 0);
 }
