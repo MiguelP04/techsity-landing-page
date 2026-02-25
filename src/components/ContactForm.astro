@@ -4,7 +4,7 @@
 
 <section
   id="contacto"
-  class="py-20 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden"
+  class="py-24 bg-linear-to-br from-gray-50 to-gray-100 relative overflow-hidden"
 >
   <!-- Background decorative elements -->
   <div class="absolute inset-0 opacity-5">
@@ -20,18 +20,22 @@
 
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Header -->
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-secondary mb-4">
+    <div class="text-center mb-12 overflow-hidden">
+      <h2 class="text-4xl font-bold text-secondary mb-4 reveal slide-left">
         ¿Listo para transformar tu negocio?
       </h2>
-      <p class="text-xl text-paragraph max-w-2xl mx-auto">
+      <p
+        class="text-xl text-paragraph max-w-2xl mx-auto reveal slide-right delay-200"
+      >
         Completa el formulario y recibe una propuesta personalizada en menos de
         24 horas. Sin compromisos, 100% gratis.
       </p>
     </div>
 
     <!-- Form Container -->
-    <div class="bg-white rounded-2xl shadow-2xl shadow-primary/10 p-8 md:p-12">
+    <div
+      class="bg-white rounded-2xl shadow-2xl shadow-primary/10 p-8 md:p-12 reveal slide-up delay-100"
+    >
       <form id="contact-form" class="space-y-6">
         <!-- Nombre o Nombre de Empresa -->
         <div class="form-group">
@@ -242,7 +246,7 @@
           <button
             type="submit"
             id="submit-btn"
-            class="w-full px-8 py-4 rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold text-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            class="w-full px-8 py-4 rounded-full bg-linear-to-r from-primary to-accent text-white font-bold text-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
             <span id="btn-text">Enviar Solicitud</span>
             <span id="btn-loading" class="hidden">
@@ -277,7 +281,7 @@
         >
           <div class="flex items-start">
             <svg
-              class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5"
+              class="w-6 h-6 text-green-500 mr-3 shrink-0 mt-0.5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -308,7 +312,7 @@
         >
           <div class="flex items-start">
             <svg
-              class="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5"
+              class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-0.5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -332,7 +336,9 @@
     </div>
 
     <!-- Contact Info alternativa -->
-    <div class="mt-8 text-center text-sm text-gray-600">
+    <div
+      class="mt-8 text-center text-sm text-gray-600 reveal fade-in delay-200"
+    >
       <p>
         ¿Prefieres contactarnos directamente? Escríbenos a <a
           href="mailto:contacto@techsity.com"
