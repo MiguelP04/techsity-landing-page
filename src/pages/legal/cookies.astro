@@ -1,0 +1,489 @@
+---
+import LegalLayout from "../../layouts/LegalLayout.astro";
+
+const sections = [
+  { id: "que-son", label: "1. ¿Qué son las cookies?" },
+  { id: "cookies-que-usamos", label: "2. Cookies que Usamos" },
+  { id: "terceros", label: "3. Cookies de Terceros" },
+  { id: "gestion", label: "4. Gestión de Cookies" },
+  { id: "actualizaciones", label: "5. Actualizaciones de Esta Política" },
+];
+---
+
+<LegalLayout title="Política de Cookies" sections={sections}>
+  <div class="space-y-14 text-sm text-slate-700 leading-relaxed">
+    <div
+      class="relative bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/60 rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
+    >
+      <div class="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-2xl">
+      </div>
+      <span class="text-2xl shrink-0">🍪</span>
+      <div>
+        <p class="font-bold text-green-800 mb-1">
+          Usamos muy pocas cookies y lo explicamos sin tecnicismos
+        </p>
+        <p class="text-green-700 leading-relaxed">
+          El sitio web de Techsity Solutions (<strong>techsity.com</strong>)
+          utiliza únicamente cookies técnicas esenciales para su funcionamiento.
+          No instalamos cookies de seguimiento ni de publicidad. Esta política
+          explica exactamente qué almacenamos en tu dispositivo y por qué.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1 -->
+    <section id="que-son" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >1</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          ¿Qué son las Cookies?
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+        >
+          <p class="text-slate-600">
+            Las cookies son pequeños archivos de texto que un sitio web almacena
+            en tu dispositivo (computadora, tablet o teléfono) cuando lo
+            visitas. Tienen una función similar a la memoria a corto plazo de
+            una web: le permiten recordar información para mejorar tu
+            experiencia.
+          </p>
+          <p class="text-slate-600">
+            Según su origen, existen dos tipos: las cookies <strong
+              >propias</strong
+            > (establecidas directamente por el sitio que visitas) y las de <strong
+              >terceros</strong
+            > (establecidas por servicios externos integrados en la web, como fuentes
+            tipográficas o herramientas de formulario). Según su duración, pueden
+            ser <strong>de sesión</strong> (se eliminan al cerrar el navegador) o
+            <strong>persistentes</strong> (se mantienen por un tiempo determinado).
+          </p>
+          <p class="text-slate-600">
+            La legislación venezolana e internacional exige que los sitios web
+            informen a sus usuarios sobre las cookies que utilizan y les den la
+            opción de gestionarlas. Esta política cumple ese requisito.
+          </p>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            Las cookies son como pequeñas notas que la web guarda en tu
+            dispositivo para recordar cosas entre visitas. Pueden ser del propio
+            sitio o de servicios externos que usa el sitio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 2 -->
+    <section id="cookies-que-usamos" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >2</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Cookies que Usamos
+        </h2>
+      </div>
+      <p class="text-slate-600">
+        A continuación, la lista completa y detallada de las cookies instaladas
+        directamente por nuestro sitio:
+      </p>
+
+      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-secondary text-white">
+              <th class="text-left px-5 py-3 font-semibold">Nombre</th>
+              <th class="text-left px-5 py-3 font-semibold">Tipo</th>
+              <th class="text-left px-5 py-3 font-semibold">Duración</th>
+              <th class="text-left px-5 py-3 font-semibold">Finalidad</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-mono text-xs font-medium text-slate-700"
+                >_session_id</td
+              >
+              <td class="px-5 py-4"
+                ><span
+                  class="bg-green-100 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full"
+                  >Esencial</span
+                ></td
+              >
+              <td class="px-5 py-4 text-slate-600">Sesión</td>
+              <td class="px-5 py-4 text-slate-600"
+                >Mantiene la sesión activa y el funcionamiento básico del
+                formulario de contacto mientras navegas.</td
+              >
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-mono text-xs font-medium text-slate-700"
+                >_csrf_token</td
+              >
+              <td class="px-5 py-4"
+                ><span
+                  class="bg-green-100 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full"
+                  >Esencial</span
+                ></td
+              >
+              <td class="px-5 py-4 text-slate-600">Sesión</td>
+              <td class="px-5 py-4 text-slate-600"
+                >Protege el formulario de contacto contra ataques CSRF
+                (Cross-Site Request Forgery), garantizando que las solicitudes
+                provienen de nuestro sitio.</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div
+        class="bg-green-50 border border-green-200 rounded-xl p-4 flex items-start gap-3"
+      >
+        <span class="text-green-600 text-xl shrink-0">✅</span>
+        <div>
+          <p class="font-semibold text-green-800 text-sm mb-1">
+            Sin cookies de marketing ni analítica
+          </p>
+          <p class="text-green-700 text-sm">
+            Este sitio no utiliza Google Analytics, Facebook Pixel, cookies de
+            retargeting ni ninguna cookie de seguimiento publicitario. No
+            creamos perfiles de comportamiento de nuestros visitantes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 3 -->
+    <section id="terceros" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >3</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Cookies y Recursos de Terceros
+        </h2>
+      </div>
+      <p class="text-slate-600">
+        Aunque no instalamos cookies de analítica o publicidad, nuestro sitio
+        carga recursos de servicios externos que pueden establecer sus propias
+        cookies o registrar datos técnicos de la conexión:
+      </p>
+
+      <div class="space-y-4">
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-2xl">🔤</span>
+            <div>
+              <p class="font-semibold text-slate-700">Google Fonts</p>
+              <p class="text-xs text-slate-500">
+                Tipografía — fonts.googleapis.com
+              </p>
+            </div>
+          </div>
+          <p class="text-slate-600 mb-2">
+            Cargamos la fuente tipográfica <strong>Inter</strong> desde los servidores
+            de Google para garantizar una presentación visual consistente. Al cargar
+            esta fuente, los servidores de Google pueden registrar técnicamente: tu
+            dirección IP, los encabezados del navegador (user-agent, referrer), la
+            fuente solicitada y la fecha/hora de la solicitud.
+          </p>
+          <p class="text-slate-600">
+            Este intercambio de datos se rige por la <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline"
+              >Política de Privacidad de Google</a
+            >. Para evitar esta transferencia de datos, puedes bloquear el
+            dominio <code class="bg-gray-100 px-1 rounded text-xs"
+              >fonts.googleapis.com</code
+            > desde las opciones de tu navegador o con una extensión como uBlock Origin.
+          </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-2xl">📧</span>
+            <div>
+              <p class="font-semibold text-slate-700">EmailJS</p>
+              <p class="text-xs text-slate-500">
+                Servicio de envío de formularios — emailjs.com
+              </p>
+            </div>
+          </div>
+          <p class="text-slate-600 mb-2">
+            El formulario de contacto de nuestro sitio utiliza <strong
+              >EmailJS</strong
+            > para enviar tu mensaje a nuestra bandeja de entrada sin necesidad de
+            un servidor propio. Al enviar el formulario, los datos que introduces
+            (nombre, correo, mensaje) son procesados temporalmente por los servidores
+            de EmailJS para entregar el correo.
+          </p>
+          <p class="text-slate-600">
+            EmailJS no almacena el contenido de tus mensajes más allá del tiempo
+            necesario para la entrega. Para más información, consulta la <a
+              href="https://www.emailjs.com/legal/privacy-policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline"
+              >Política de Privacidad de EmailJS</a
+            >.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5"
+        >
+          <p class="font-semibold text-slate-700 mb-2">
+            ¿Por qué usar estos servicios?
+          </p>
+          <p class="text-slate-600">
+            Usar Google Fonts y EmailJS nos permite entregar nuestro sitio de
+            forma más eficiente, sin cargar tipografías pesadas localmente ni
+            mantener un servidor de correo propio. Elegimos servicios
+            reconocidos que cumplen con los estándares internacionales de
+            privacidad (incluido el RGPD).
+          </p>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            Google Fonts y EmailJS son herramientas externas que usamos para
+            mostrar bien el sitio y recibir mensajes. Pueden registrar tu IP
+            cuando los usan, pero no son nuestras cookies de seguimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 4 -->
+    <section id="gestion" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >4</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          ¿Cómo Gestionar o Eliminar las Cookies?
+        </h2>
+      </div>
+      <p class="text-slate-600">
+        Puedes configurar tu navegador para que te avise antes de aceptar
+        cookies, para que rechace todas o algunas, o para eliminar las que ya
+        tienes guardadas. Ten en cuenta que desactivar ciertas cookies
+        esenciales puede afectar al funcionamiento básico del sitio (por
+        ejemplo, el envío del formulario). A continuación encontrarás los
+        enlaces directos a las guías de los navegadores más populares:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          [
+            {
+              name: "Google Chrome",
+              icon: "🔵",
+              url: "https://support.google.com/chrome/answer/95647",
+              steps: [
+                "Menú ⋮ → Configuración",
+                "Privacidad y seguridad",
+                "Cookies y datos de sitios",
+                "Gestionar cookies",
+              ],
+            },
+            {
+              name: "Mozilla Firefox",
+              icon: "🦊",
+              url: "https://support.mozilla.org/kb/delete-browsing-search-download-history-firefox",
+              steps: [
+                "Menú ☰ → Configuración",
+                "Privacidad y seguridad",
+                "Cookies y datos del sitio",
+                "Gestionar datos",
+              ],
+            },
+            {
+              name: "Microsoft Edge",
+              icon: "🌐",
+              url: "https://support.microsoft.com/topic/delete-cookies-in-microsoft-edge-63947406",
+              steps: [
+                "Menú … → Configuración",
+                "Cookies y permisos de sitio",
+                "Administrar y eliminar cookies",
+              ],
+            },
+            {
+              name: "Safari (Mac)",
+              icon: "🧭",
+              url: "https://support.apple.com/guide/safari/manage-cookies-sfri11471",
+              steps: [
+                "Menú Safari → Preferencias",
+                "Pestaña Privacidad",
+                "Gestionar datos del sitio web",
+              ],
+            },
+            {
+              name: "Safari (iPhone/iPad)",
+              icon: "📱",
+              url: "https://support.apple.com/en-us/105082",
+              steps: [
+                "Ajustes → Apps → Safari",
+                "Bloquear todas las cookies",
+                "Avanzado → Datos de sitios web",
+              ],
+            },
+            {
+              name: "Opera",
+              icon: "🔴",
+              url: "https://help.opera.com/en/latest/web-preferences/",
+              steps: [
+                "Menú → Configuración",
+                "Privacidad y seguridad",
+                "Configuración de cookies",
+              ],
+            },
+          ].map(({ name, icon, url, steps }) => (
+            <div class="bg-white border border-gray-200 rounded-xl p-5 hover:border-primary/30 transition-colors">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">{icon}</span>
+                <p class="font-semibold text-slate-700 text-sm">{name}</p>
+              </div>
+              <ol class="text-xs text-slate-500 space-y-1 mb-3">
+                {steps.map((step, i) => (
+                  <li class="flex items-start gap-1">
+                    <span class="shrink-0 font-medium text-slate-400">
+                      {i + 1}.
+                    </span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs text-primary hover:underline"
+              >
+                Guía oficial →
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 5 -->
+    <section id="actualizaciones" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >5</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Actualizaciones de Esta Política
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+        >
+          <p class="text-slate-600">
+            Techsity Solutions puede actualizar esta Política de Cookies en
+            cualquier momento para reflejar cambios en la legislación vigente,
+            en los servicios que utilizamos o en las prácticas del sector.
+            Publicaremos la versión actualizada en esta misma página con la
+            fecha de la última modificación claramente visible en el encabezado.
+          </p>
+          <p class="text-slate-600">
+            Te recomendamos revisar esta página periódicamente si deseas
+            mantenerte informado. El uso continuado del sitio después de una
+            actualización implica la aceptación de la nueva versión de la
+            política.
+          </p>
+          <p class="text-slate-600">
+            Si los cambios son materialmente significativos (como la
+            introducción de nuevas cookies de seguimiento), lo comunicaremos de
+            forma más prominente, por ejemplo mediante un banner de notificación
+            al ingresar al sitio.
+          </p>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            Si cambia algo importante sobre cómo usamos cookies, lo
+            notificaremos claramente. Consultar esta página de vez en cuando es
+            la mejor forma de estar al día.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div
+      class="relative bg-gradient-to-br from-secondary to-accent rounded-2xl p-8 text-center text-white overflow-hidden"
+    >
+      <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full">
+      </div>
+      <div
+        class="absolute -bottom-6 -left-6 w-28 h-28 bg-primary/10 rounded-full"
+      >
+      </div>
+      <div class="relative">
+        <p class="font-black text-lg mb-2">
+          ¿Preguntas sobre nuestras cookies?
+        </p>
+        <p class="text-white/60 text-sm mb-6">
+          Escríbenos y te respondemos en un lenguaje sin tecnicismos.
+        </p>
+        <a
+          href="mailto:techsitysolutions@gmail.com"
+          class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 active:scale-95 text-white text-sm font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-primary/30"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
+              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+          >
+          Contactar por email
+        </a>
+      </div>
+    </div>
+  </div>
+</LegalLayout>
