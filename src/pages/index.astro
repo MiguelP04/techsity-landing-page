@@ -3,8 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import Services from "../components/Services.astro";
+import Benefits from "../components/Benefits.astro";
 import Footer from "../components/Footer.astro";
-import { Check } from "lucide-astro";
+import TestimonialCarousel from "../components/TestimonialCarousel.astro";
+import ContactForm from "../components/ContactForm.astro";
+import FAQ from "../components/FAQ.astro";
 ---
 
 <Layout title="Techsity Solutions | Transformación Digital">
@@ -12,11 +15,10 @@ import { Check } from "lucide-astro";
   <main>
     <Hero />
     <Services />
-
-    <!-- Seccion Nosotros Breve -->
+    <!-- Seccion Sobre Nosotros -->
     <section
       id="nosotros"
-      class="py-20 bg-secondary text-white relative overflow-hidden"
+      class="py-24 bg-secondary text-white relative overflow-hidden"
     >
       <!-- Background patterns -->
       <div class="absolute inset-0 opacity-10">
@@ -31,58 +33,22 @@ import { Check } from "lucide-astro";
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="md:flex items-center gap-16">
-          <div class="md:w-1/2 mb-10 md:mb-0">
-            <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Equipo Techsity"
-              class="rounded-2xl shadow-2xl shadow-primary/20"
-            />
-          </div>
-          <div class="md:w-1/2">
-            <h2 class="text-3xl font-bold mb-6">¿Por qué elegirnos?</h2>
-            <p class="text-gray-300 mb-6 leading-relaxed">
-              En Techsity Solutions, no solo escribimos código; construimos el
-              futuro de tu negocio. Nuestro enfoque combina excelencia técnica
-              con una profunda comprensión de tus objetivos comerciales.
-            </p>
-            <ul class="space-y-4">
-              <li class="flex items-center space-x-3">
-                <Check class="w-5 h-5 text-primary" />
-                <span>Metodologías Ágiles</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <Check class="w-5 h-5 text-primary" />
-                <span>Código Limpio y Escalable</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <Check class="w-5 h-5 text-primary" />
-                <span>Diseño Centrado en el Usuario</span>
-              </li>
-            </ul>
-          </div>
+        <h3 class="text-3xl font-bold text-center mb-12 reveal slide-up">
+          Conoce a Nuestro Equipo
+        </h3>
+        <div class="reveal fade-in delay-200">
+          <TestimonialCarousel />
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-secondary mb-6">
-          ¿Listo para comenzar tu próximo proyecto?
-        </h2>
-        <p class="text-xl text-paragraph mb-10">
-          Agenda una llamada de descubrimiento gratuita de 15 minutos. Sin
-          compromisos.
-        </p>
-        <a
-          href="#contacto"
-          class="inline-block px-8 py-4 rounded-full bg-primary text-white font-semibold text-lg hover:brightness-110 transition-all shadow-lg hover:shadow-primary/30"
-        >
-          Hablemos Ahora
-        </a>
-      </div>
-    </section>
+    <Benefits />
+
+    <!-- Contact Form Section -->
+    <ContactForm />
+
+    <!-- FAQ Section -->
+    <FAQ />
   </main>
   <Footer />
 </Layout>

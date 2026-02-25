@@ -1,0 +1,297 @@
+---
+// FAQ.astro – Preguntas Frecuentes
+const faqCategories = [
+  {
+    id: "metodologia",
+    label: "Proceso de trabajo",
+    questions: [
+      {
+        question: "¿Qué metodologías de trabajo utilizan?",
+        answer:
+          "Usamos metodologías ágiles (Scrum o Kanban) para garantizar entregas incrementales y comunicación constante. Esto nos permite adaptarnos rápidamente a cualquier cambio manteniendo la calidad del producto.",
+      },
+      {
+        question: "¿Cómo se involucra el cliente durante el desarrollo?",
+        answer:
+          "Definimos la figura del Product Owner por parte del cliente para validar avances en cada Sprint o ciclo de entrega. El cliente puede ver el progreso en tiempo real y dar retroalimentación en cada iteración.",
+      },
+      {
+        question:
+          "¿Puedo realizar cambios en los requerimientos una vez iniciado el proyecto?",
+        answer:
+          "Sí, gracias a nuestra metodología ágil podemos pivotar. Evaluamos el impacto de cada cambio en el cronograma y presupuesto antes de implementarlo para mantenerte siempre informado.",
+      },
+    ],
+  },
+  {
+    id: "tecnologia",
+    label: "Tecnología",
+    questions: [
+      {
+        question: "¿Con qué lenguajes y tecnologías trabajan?",
+        answer:
+          "Trabajamos con un stack moderno: React, Next.js, Vue, Node.js, Python, Flutter, AWS, PostgreSQL, MongoDB y más. Seleccionamos las herramientas más adecuadas según cada proyecto.",
+      },
+      {
+        question: "¿Desarrollan aplicaciones nativas o híbridas?",
+        answer:
+          "Desarrollamos ambas. Evaluamos contigo la diferencia en rendimiento, costo y experiencia de usuario para recomendarte la mejor opción según tu presupuesto y los objetivos del producto.",
+      },
+      {
+        question: "¿Pueden integrarse con sistemas que ya tengo (Legacy)?",
+        answer:
+          "Sí, nos especializamos en crear APIs y conectores para que el nuevo software se comunique con tus sistemas actuales sin interrumpir tu operación diaria.",
+      },
+    ],
+  },
+  {
+    id: "costos",
+    label: "Costos y tiempos",
+    questions: [
+      {
+        question: "¿Cómo estiman el costo de un proyecto?",
+        answer:
+          "Ofrecemos dos modalidades: Precio Cerrado (para alcances muy bien definidos) o Time & Materials (pago por horas/recursos para proyectos evolutivos). En ambos casos nos ajustamos al presupuesto que indicaste en el formulario.",
+      },
+      {
+        question: "¿Cuánto tiempo tarda en desarrollarse un MVP?",
+        answer:
+          "Depende de la complejidad, pero típicamente un MVP funcional puede estar listo entre 8 y 12 semanas. En nuestra primera reunión te daremos una estimación más precisa.",
+      },
+    ],
+  },
+  {
+    id: "legal",
+    label: "Propiedad y seguridad",
+    questions: [
+      {
+        question:
+          "¿De quién es el código fuente una vez finalizado el proyecto?",
+        answer:
+          "El código es 100% propiedad del cliente. Al finalizar, entregamos todos los repositorios y documentación técnica completa para que tengas total control de tu producto.",
+      },
+      {
+        question: "¿Ofrecen mantenimiento después del lanzamiento?",
+        answer:
+          "Sí, contamos con planes de soporte preventivo, correctivo y evolutivo para asegurar que tu software no quede obsoleto con el tiempo.",
+      },
+      {
+        question: "¿Cómo garantizan la seguridad de mis datos?",
+        answer:
+          "Implementamos protocolos de encriptación, cumplimos con normativas como GDPR y firmamos acuerdos de confidencialidad (NDA) desde el primer minuto de colaboración.",
+      },
+    ],
+  },
+];
+---
+
+<section id="faq" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header – left-aligned, quiet -->
+    <div class="mb-12 reveal slide-up">
+      <h2 class="text-2xl md:text-3xl font-semibold text-secondary">
+        Preguntas frecuentes
+      </h2>
+      <p class="mt-3 text-paragraph text-sm max-w-xl leading-relaxed">
+        Resolvemos las dudas más comunes antes de que inicies tu proyecto con
+        nosotros.
+      </p>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="flex flex-col md:flex-row gap-8 lg:gap-16" id="faq-layout">
+      <!-- Left: category list -->
+      <nav
+        class="md:w-52 lg:w-60 flex-shrink-0 reveal slide-left"
+        aria-label="Categorías FAQ"
+      >
+        <ul class="flex flex-row flex-wrap md:flex-col gap-1" role="tablist">
+          {
+            faqCategories.map((cat, i) => (
+              <li role="presentation">
+                <button
+                  role="tab"
+                  id={`tab-${cat.id}`}
+                  data-tab={cat.id}
+                  aria-controls={`panel-${cat.id}`}
+                  aria-selected={i === 0 ? "true" : "false"}
+                  class={`faq-tab-btn w-full text-left text-sm px-3 py-2 rounded-lg transition-colors duration-200 cursor-pointer ${
+                    i === 0
+                      ? "bg-white text-secondary font-semibold shadow-sm"
+                      : "text-paragraph hover:text-secondary hover:bg-white/60"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <!-- Right: accordion panels -->
+      <div class="flex-1 min-w-0 reveal fade-in delay-200">
+        {
+          faqCategories.map((cat, i) => (
+            <div
+              id={`panel-${cat.id}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${cat.id}`}
+              class={`faq-panel ${i !== 0 ? "hidden" : ""}`}
+            >
+              <div class="divide-y divide-gray-200">
+                {cat.questions.map((item) => (
+                  <div class="faq-item py-1">
+                    <button
+                      class="faq-question w-full flex items-start justify-between gap-4 py-4 text-left cursor-pointer group"
+                      aria-expanded="false"
+                    >
+                      <span class="text-sm font-medium text-secondary group-hover:text-accent transition-colors duration-150">
+                        {item.question}
+                      </span>
+                      <span class="faq-chevron flex-shrink-0 mt-0.5 text-gray-400 group-hover:text-accent transition-colors duration-150">
+                        <svg
+                          class="w-4 h-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="faq-answer overflow-hidden max-h-0">
+                      <p class="pb-4 text-sm text-paragraph leading-relaxed">
+                        {item.answer}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Footer note -->
+    <p class="mt-12 text-xs text-paragraph-light reveal fade-in delay-300">
+      ¿Tienes una pregunta diferente?{" "}
+      <a
+        href="#contacto"
+        class="text-accent hover:underline underline-offset-2 transition-colors"
+      >
+        Contáctanos directamente.
+      </a>
+    </p>
+  </div>
+</section>
+
+<script>
+  // ── Tab switching ──────────────────────────────────────────────────────────
+  const tabBtns = document.querySelectorAll<HTMLButtonElement>(".faq-tab-btn");
+  const panels = document.querySelectorAll<HTMLElement>(".faq-panel");
+
+  tabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.dataset.tab!;
+
+      tabBtns.forEach((b) => {
+        b.classList.remove(
+          "bg-white",
+          "text-secondary",
+          "font-semibold",
+          "shadow-sm",
+        );
+        b.classList.add(
+          "text-paragraph",
+          "hover:text-secondary",
+          "hover:bg-white/60",
+        );
+        b.setAttribute("aria-selected", "false");
+      });
+
+      btn.classList.add(
+        "bg-white",
+        "text-secondary",
+        "font-semibold",
+        "shadow-sm",
+      );
+      btn.classList.remove(
+        "text-paragraph",
+        "hover:text-secondary",
+        "hover:bg-white/60",
+      );
+      btn.setAttribute("aria-selected", "true");
+
+      panels.forEach((panel) => {
+        if (panel.id === `panel-${targetId}`) {
+          panel.classList.remove("hidden");
+        } else {
+          panel.classList.add("hidden");
+          panel
+            .querySelectorAll<HTMLElement>(".faq-answer")
+            .forEach((a) => (a.style.maxHeight = "0px"));
+          panel
+            .querySelectorAll<HTMLButtonElement>(".faq-question")
+            .forEach((q) => q.setAttribute("aria-expanded", "false"));
+          panel
+            .querySelectorAll<HTMLElement>(".faq-chevron svg")
+            .forEach((svg) => (svg.style.transform = "rotate(0deg)"));
+        }
+      });
+    });
+  });
+
+  // ── Accordion ─────────────────────────────────────────────────────────────
+  document
+    .querySelectorAll<HTMLButtonElement>(".faq-question")
+    .forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item")!;
+        const answer = item.querySelector<HTMLElement>(".faq-answer")!;
+        const iconSvg = btn.querySelector<HTMLElement>(".faq-chevron svg")!;
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+        // Collapse siblings
+        item
+          .closest(".faq-panel")!
+          .querySelectorAll(".faq-item")
+          .forEach((sib) => {
+            if (sib === item) return;
+            sib.querySelector<HTMLElement>(".faq-answer")!.style.maxHeight =
+              "0px";
+            sib
+              .querySelector<HTMLButtonElement>(".faq-question")!
+              .setAttribute("aria-expanded", "false");
+            sib.querySelector<HTMLElement>(
+              ".faq-chevron svg",
+            )!.style.transform = "rotate(0deg)";
+          });
+
+        if (isOpen) {
+          answer.style.maxHeight = "0px";
+          btn.setAttribute("aria-expanded", "false");
+          iconSvg.style.transform = "rotate(0deg)";
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          btn.setAttribute("aria-expanded", "true");
+          iconSvg.style.transform = "rotate(45deg)"; // + becomes ×
+        }
+      });
+    });
+</script>
+
+<style>
+  .faq-answer {
+    transition: max-height 0.3s ease-in-out;
+  }
+  .faq-chevron svg {
+    transition: transform 0.25s ease;
+  }
+</style>

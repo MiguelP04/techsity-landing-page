@@ -2,80 +2,129 @@
 import {
   Globe,
   Smartphone,
-  Lightbulb,
   ShoppingBag,
-  Palette,
-  TrendingUp,
+  Bot,
+  CheckCircle2,
+  ArrowRight,
 } from "lucide-astro";
 
 const services = [
   {
     title: "Desarrollo Web",
     description:
-      "Sitios web rápidos, responsivos y optimizados para SEO utilizando las últimas tecnologías como Astro, React y Next.js.",
+      "Sitios web rápidos y optimizados que convierten visitas en clientes.",
+    benefits: [
+      "Velocidad de carga optimizada",
+      "Adaptable a todos los dispositivos",
+      "Mejor posicionamiento en Google",
+    ],
     Icon: Globe,
   },
   {
     title: "Apps Móviles",
     description:
-      "Aplicaciones nativas y multiplataforma para iOS y Android que ofrecen una experiencia de usuario excepcional.",
+      "Aplicaciones intuitivas para iOS y Android con el mejor rendimiento.",
+    benefits: [
+      "Experiencia fluida y nativa",
+      "Notificaciones en tiempo real",
+      "Funcionamiento sin conexión",
+    ],
     Icon: Smartphone,
   },
   {
-    title: "Consultoría IT",
+    title: "IA y Automatización",
     description:
-      "Asesoramiento experto para optimizar tus procesos tecnológicos y mejorar la eficiencia de tu empresa.",
-    Icon: Lightbulb,
+      "Automatiza tareas repetitivas y potencia tu negocio con inteligencia artificial.",
+    benefits: [
+      "Ahorro de tiempo operativo",
+      "Atención al cliente 24/7",
+      "Reducción de errores humanos",
+    ],
+    Icon: Bot,
   },
+
   {
     title: "E-Commerce",
-    description:
-      "Tiendas en línea seguras y escalables diseñadas para maximizar tus ventas y conversión.",
+    description: "Tiendas online diseñadas para vender más y gestionar menos.",
+    benefits: [
+      "Pasarelas de pago seguras",
+      "Gestión de inventario fácil",
+      "Recuperación de carritos",
+    ],
     Icon: ShoppingBag,
-  },
-  {
-    title: "Diseño UI/UX",
-    description:
-      "Interfaces intuitivas y atractivas que enamoran a tus usuarios desde el primer clic.",
-    Icon: Palette,
-  },
-  {
-    title: "Marketing Digital",
-    description:
-      "Estrategias de crecimiento para posicionar tu marca y alcanzar a tu audiencia ideal.",
-    Icon: TrendingUp,
   },
 ];
 ---
 
-<section id="servicios" class="py-20 bg-white">
+<section id="servicios" class="py-24 bg-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+    <div class="text-center mb-16 overflow-hidden">
+      <h2
+        class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl reveal slide-left"
+      >
         Nuestros Servicios
       </h2>
-      <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+      <p
+        class="mt-4 max-w-2xl mx-auto text-xl text-gray-500 reveal slide-right delay-200"
+      >
         Soluciones integrales diseñadas para cada etapa de tu crecimiento
         digital.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {
-        services.map((service) => (
-          <div class="group p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default">
-            <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
-              <service.Icon class="w-8 h-8" />
+        services.map((service, index) => {
+          const animationDirection =
+            index % 2 === 0 ? "slide-left" : "slide-right";
+          return (
+            <div
+              class={`group p-8 bg-white rounded-2xl border border-gray-100 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1 cursor-default flex flex-col h-full reveal ${animationDirection} delay-${((index % 2) + 1) * 100}`}
+            >
+              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.Icon class="w-8 h-8" />
+              </div>
+              <h3 class="text-xl font-bold text-secondary mb-3">
+                {service.title}
+              </h3>
+              <p class="text-paragraph leading-relaxed text-sm mb-6 grow">
+                {service.description}
+              </p>
+              <ul class="space-y-3">
+                {service.benefits.map((benefit) => (
+                  <li class="flex items-start text-sm text-gray-600">
+                    <CheckCircle2 class="w-5 h-5 text-primary mr-3 shrink-0 mt-0.5" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 class="text-xl font-bold text-secondary mb-3">
-              {service.title}
-            </h3>
-            <p class="text-paragraph leading-relaxed text-sm">
-              {service.description}
-            </p>
-          </div>
-        ))
+          );
+        })
       }
+    </div>
+
+    <div class="mt-16 text-center">
+      <div
+        class="bg-white rounded-2xl p-8 md:p-10 border border-gray-200/60 shadow-sm max-w-4xl mx-auto reveal slide-up delay-200"
+      >
+        <h3 class="text-2xl font-bold text-slate-900 mb-3">
+          ¿Tienes un proyecto diferente en mente?
+        </h3>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+          No nos limitamos a lo estándar. Desarrollamos software a medida
+          adaptado 100% a las necesidades del cliente.
+        </p>
+        <a
+          href="#contacto"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-primary rounded-full hover:bg-primary/90 transition-all duration-300 shadow-md shadow-primary/20 hover:shadow-lg hover:-translate-y-0.5 group"
+        >
+          Cuéntanos tu idea
+          <ArrowRight
+            class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </section>

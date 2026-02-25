@@ -4,30 +4,40 @@
 
 <section
   id="inicio"
-  class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
+  class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden"
 >
   <div class="absolute inset-0 -z-10">
+    <!-- Video de fondo con opacidad -->
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover opacity-20"
+    >
+      <source src="/videos/hero_video.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Gradientes sobre el video -->
     <div
-      class="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] rounded-full bg-primary/20 blur-3xl opacity-50"
+      class="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] rounded-full bg-primary/20 blur-3xl opacity-50 reveal fade-in delay-200"
     >
     </div>
     <div
-      class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[600px] h-[600px] rounded-full bg-accent/20 blur-3xl opacity-50"
+      class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[600px] h-[600px] rounded-full bg-accent/20 blur-3xl opacity-50 reveal fade-in delay-300"
     >
     </div>
   </div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <div
-      class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-8 animate-fade-in-up"
+      class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-8 reveal slide-up"
     >
-      <span class="text-sm font-medium"
-        >🚀 Impulsando la innovación digital</span
-      >
+      <span class="text-sm font-medium">Soluciones tecnológicas a medida</span>
     </div>
 
     <h1
-      class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-secondary mb-8 animate-fade-in-up delay-100"
+      class="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-secondary mb-8 leading-tight wrap-break-word reveal slide-up delay-100"
     >
       Transformamos ideas en <br class="hidden md:block" />
       <span
@@ -37,7 +47,7 @@
     </h1>
 
     <p
-      class="mt-6 text-xl text-paragraph max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200"
+      class="mt-6 text-lg sm:text-xl text-paragraph max-w-3xl mx-auto mb-10 leading-relaxed reveal slide-up delay-200"
     >
       Ayudamos a empresas a escalar con tecnología de vanguardia. Desde
       desarrollo web hasta inteligencia artificial, construimos el futuro de tu
@@ -45,7 +55,7 @@
     </p>
 
     <div
-      class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-300"
+      class="flex flex-col sm:flex-row justify-center gap-4 reveal slide-up delay-300"
     >
       <a
         href="#contacto"
@@ -63,49 +73,94 @@
 
     <!-- Stats/Social Proof -->
     <div
-      class="mt-20 pt-10 border-t border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70"
+      class="mt-20 pt-10 border-t border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70 reveal fade-in"
     >
-      <div>
-        <p class="text-3xl font-bold text-slate-900">50+</p>
+      <div class="reveal slide-up delay-100">
+        <p class="text-3xl font-bold text-slate-900">
+          <span class="stat-counter" data-target="10">0</span>+
+        </p>
         <p class="text-sm text-gray-500 mt-1">Proyectos Exitosos</p>
       </div>
-      <div>
-        <p class="text-3xl font-bold text-slate-900">98%</p>
+      <div class="reveal slide-up delay-100">
+        <p class="text-3xl font-bold text-slate-900">
+          <span class="stat-counter" data-target="98">0</span>%
+        </p>
         <p class="text-sm text-gray-500 mt-1">Clientes Satisfechos</p>
       </div>
-      <div>
-        <p class="text-3xl font-bold text-slate-900">24/7</p>
+      <div class="reveal slide-up delay-200">
+        <p class="text-3xl font-bold text-slate-900">
+          <span class="stat-counter" data-target="24">0</span>/7
+        </p>
         <p class="text-sm text-gray-500 mt-1">Soporte Técnico</p>
       </div>
-      <div>
-        <p class="text-3xl font-bold text-slate-900">5+</p>
+      <div class="reveal slide-up delay-200">
+        <p class="text-3xl font-bold text-slate-900">
+          <span class="stat-counter" data-target="5">0</span>+
+        </p>
         <p class="text-sm text-gray-500 mt-1">Años de Experiencia</p>
       </div>
     </div>
   </div>
 </section>
 
-<style>
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
-    transform: translateY(20px);
-  }
+<script>
+  const animateCounters = () => {
+    const counters = document.querySelectorAll(".stat-counter");
 
-  .delay-100 {
-    animation-delay: 0.1s;
-  }
-  .delay-200 {
-    animation-delay: 0.2s;
-  }
-  .delay-300 {
-    animation-delay: 0.3s;
-  }
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
 
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const targetVal = parseInt(
+            target.getAttribute("data-target") || "0",
+            10,
+          );
+          // Aumentamos la duración a 3.5 segundos para que se aprecie más
+          const duration = 3500;
+          const frameDuration = 1000 / 60; // 60fps
+          const totalFrames = Math.round(duration / frameDuration);
+          let frame = 0;
+
+          // Función Easing más lineal al principio y suave al final
+          const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+          // Esperamos 400ms para que la sección asome y el fade-in comience antes de empezar el conteo
+          setTimeout(() => {
+            const counterInterval = setInterval(() => {
+              frame++;
+              const progress = frame / totalFrames;
+              const currentVal = Math.round(targetVal * easeOutCubic(progress));
+
+              if (frame >= totalFrames) {
+                target.textContent = targetVal.toString();
+                clearInterval(counterInterval);
+              } else {
+                target.textContent = currentVal.toString();
+              }
+            }, frameDuration);
+          }, 400);
+
+          // Dejamos de observar cuando la animación se ejecuta una vez
+          observer.unobserve(target);
+        }
+      });
+    }, observerOptions);
+
+    counters.forEach((counter) => {
+      counterObserver.observe(counter);
+    });
+  };
+
+  // Asegurarnos que corre de forma segura tanto en la carga inicial como si usamos transiciones luego
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", animateCounters);
+  } else {
+    animateCounters();
   }
-</style>
+</script>

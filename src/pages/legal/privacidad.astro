@@ -1,0 +1,646 @@
+---
+import LegalLayout from "../../layouts/LegalLayout.astro";
+
+const sections = [
+  { id: "responsable", label: "1. Responsable del Tratamiento" },
+  { id: "datos", label: "2. Datos Recolectados" },
+  { id: "finalidad", label: "3. Finalidad del Tratamiento" },
+  { id: "base-legal", label: "4. Base Legal" },
+  { id: "encargado", label: "5. Acceso a Datos del Cliente" },
+  { id: "terceros", label: "6. Datos Compartidos con Terceros" },
+  { id: "derechos", label: "7. Tus Derechos" },
+  { id: "seguridad", label: "8. Seguridad de los Datos" },
+  { id: "nda", label: "9. Compromiso de Confidencialidad" },
+  { id: "contacto", label: "10. Contacto DPO" },
+];
+---
+
+<LegalLayout
+  title="Política de Privacidad y Manejo de Datos"
+  sections={sections}
+>
+  <div class="space-y-14 text-sm text-slate-700 leading-relaxed">
+    <div
+      class="relative bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/60 rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
+    >
+      <div class="absolute top-0 left-0 w-1 h-full bg-accent rounded-l-2xl">
+      </div>
+      <span class="text-2xl shrink-0">🔒</span>
+      <div>
+        <p class="font-bold text-blue-800 mb-1">
+          Tu privacidad es una prioridad
+        </p>
+        <p class="text-blue-700 leading-relaxed">
+          En Techsity Solutions tratamos los datos personales con total
+          transparencia y respeto. Esta política te explica qué información
+          recolectamos, con qué finalidad la usamos, cómo la protegemos y cuáles
+          son tus derechos, cumpliendo con las leyes de protección de datos
+          aplicables en Venezuela e internacionalmente.
+        </p>
+      </div>
+    </div>
+
+    <!-- 1 -->
+    <section id="responsable" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >1</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Responsable del Tratamiento
+        </h2>
+      </div>
+      <p class="text-slate-600">
+        El Responsable del Tratamiento de los datos personales recogidos a
+        través de este sitio web es:
+      </p>
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <span class="font-semibold text-slate-700">Empresa:</span><span
+              class="text-slate-600 ml-2">Techsity Solutions</span
+            >
+          </div>
+          <div>
+            <span class="font-semibold text-slate-700">País:</span><span
+              class="text-slate-600 ml-2">Venezuela (Falcón)</span
+            >
+          </div>
+          <div>
+            <span class="font-semibold text-slate-700">Email:</span><span
+              class="text-slate-600 ml-2">techsitysolutions@gmail.com</span
+            >
+          </div>
+          <div>
+            <span class="font-semibold text-slate-700">WhatsApp:</span><span
+              class="text-slate-600 ml-2">+58 424 620 9421</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 2 -->
+    <section id="datos" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >2</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Datos Recolectados
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+        >
+          <p class="font-semibold text-slate-700">
+            2.1 Datos del formulario de contacto
+          </p>
+          <ul class="text-slate-600 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><span
+                ><strong>Nombre completo:</strong> para identificarte y personalizar
+                la comunicación.</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><span
+                ><strong>Correo electrónico:</strong> para responderte y dar seguimiento
+                a tu consulta.</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><span
+                ><strong>Empresa / organización:</strong> para entender el contexto
+                de tu necesidad.</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><span
+                ><strong>Servicio de interés y presupuesto:</strong> para preparar
+                una propuesta adecuada a tu proyecto.</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><span
+                ><strong>Mensaje libre:</strong> la descripción de tu proyecto o consulta
+                en tus propias palabras.</span
+              >
+            </li>
+          </ul>
+          <p class="text-slate-500 text-xs pt-2 border-t border-gray-100">
+            <strong>No recolectamos</strong> datos sensibles como información bancaria,
+            datos de salud, biometría ni número de documento de identidad a través
+            del formulario.
+          </p>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            Solo te pedimos datos que son básicos para poder responderte y
+            entender tu proyecto: nombre, correo, empresa y de qué trata tu
+            idea. Nada más.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 3 -->
+    <section id="finalidad" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >3</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Finalidad del Tratamiento
+        </h2>
+      </div>
+      <p class="text-slate-600">
+        Utilizamos tus datos exclusivamente para las siguientes finalidades. No
+        los usamos para marketing no solicitado ni los cedemos para publicidad:
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-secondary text-white">
+              <th class="text-left px-5 py-3 font-semibold">Finalidad</th>
+              <th class="text-left px-5 py-3 font-semibold">Datos utilizados</th
+              >
+              <th class="text-left px-5 py-3 font-semibold"
+                >Período de conservación</th
+              >
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-medium text-slate-700"
+                >Respuesta a consultas y prospección comercial</td
+              >
+              <td class="px-5 py-4 text-slate-600"
+                >Nombre, correo, empresa, mensaje</td
+              >
+              <td class="px-5 py-4 text-slate-600"
+                >12 meses desde el último contacto</td
+              >
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-5 py-4 font-medium text-slate-700"
+                >Ejecución del proyecto contratado</td
+              >
+              <td class="px-5 py-4 text-slate-600"
+                >Todos los datos del contrato</td
+              >
+              <td class="px-5 py-4 text-slate-600">Duración del contrato</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 4 -->
+    <section id="base-legal" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >4</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Base Legal del Tratamiento
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+        >
+          <p class="text-slate-600">
+            El tratamiento de tus datos personales descansa en las siguientes
+            bases legales reconocidas en la legislación venezolana e
+            internacional:
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span
+                class="bg-primary/10 text-primary text-xs font-bold px-2 py-0.5 rounded-md shrink-0 mt-0.5"
+                >Consentimiento</span
+              >
+              <span class="text-slate-600"
+                >Al enviar el formulario de contacto, otorgas consentimiento
+                expreso para que tratemos tus datos con las finalidades
+                descritas.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="bg-accent/10 text-accent text-xs font-bold px-2 py-0.5 rounded-md shrink-0 mt-0.5"
+                >Contrato</span
+              >
+              <span class="text-slate-600"
+                >Una vez formalizada la relación, el tratamiento es necesario
+                para la ejecución del contrato de servicios.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-0.5 rounded-md shrink-0 mt-0.5"
+                >Ley</span
+              >
+              <span class="text-slate-600"
+                >Ciertos datos se conservan por obligación legal (registros
+                fiscales, contables).</span
+              >
+            </li>
+          </ul>
+          <p class="text-slate-500 text-xs pt-2 border-t border-gray-100">
+            Cumplimos con la <strong
+              >Ley Orgánica de Protección de Datos Personales (LOPDP) de
+              Venezuela</strong
+            > y adoptamos los principios del <strong
+              >Reglamento General de Protección de Datos (RGPD) europeo</strong
+            > para clientes de la Unión Europea.
+          </p>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            Usamos tus datos porque tú nos lo permites al contactarnos, o porque
+            es necesario para ejecutar el servicio contratado. Cumplimos la ley
+            venezolana y los estándares europeos de privacidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 5 -->
+    <section id="encargado" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >5</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Acceso a datos del cliente
+        </h2>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+        <p class="font-semibold text-amber-800 mb-2">
+          ⚠️ Cuando el cliente nos da acceso a sus datos
+        </p>
+        <p class="text-amber-700 leading-relaxed">
+          Durante el desarrollo o testing de un proyecto, es frecuente que el
+          Cliente proporcione acceso a bases de datos que contienen información
+          de sus propios usuarios. En estos casos, Techsity Solutions actúa
+          exclusivamente como <strong>Encargado del Tratamiento</strong>, nunca
+          como Responsable independiente de esos datos.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5"
+        >
+          <p class="font-semibold text-slate-700 mb-3">
+            Compromisos como Encargado:
+          </p>
+          <ul class="text-slate-600 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 shrink-0 mt-0.5">✓</span>Trataremos
+              los datos únicamente según las instrucciones del Cliente y para
+              los fines del proyecto.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 shrink-0 mt-0.5">✓</span>No usaremos
+              los datos de los usuarios del Cliente para ninguna finalidad
+              propia ni de terceros.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 shrink-0 mt-0.5">✓</span
+              >Implementaremos medidas técnicas adecuadas para proteger esos
+              datos durante el desarrollo.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 shrink-0 mt-0.5">✓</span>Eliminaremos
+              o entregaremos al Cliente toda la información al finalizar el
+              proyecto.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-500 shrink-0 mt-0.5">✓</span>Notificaremos
+              al Cliente en máximo 72 horas ante cualquier brecha de seguridad
+              que afecte esos datos.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            Si nos das acceso a la base de datos de tus usuarios para hacer
+            pruebas, la usamos solo para eso y la borramos al terminar. Nunca la
+            compartimos ni la usamos para otro fin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 6 -->
+    <section id="terceros" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >6</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Datos Compartidos con Terceros
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+        >
+          <p class="text-slate-600">
+            Techsity Solutions <strong>no vende, alquila ni comercializa</strong
+            > tus datos con terceros. Solo compartimos información en los supuestos
+            siguientes:
+          </p>
+          <ul class="text-slate-600 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><strong
+                >Herramientas operativas:</strong
+              > servicios de email (EmailJS) para enviar tu mensaje, y plataformas
+              de gestión interna del proyecto — siempre bajo acuerdos de procesamiento
+              de datos que garantizan su protección.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><strong
+                >Obligación legal:</strong
+              > cuando una autoridad competente lo exija mediante orden judicial o
+              requerimiento oficial.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span><strong
+                >Consentimiento explícito:</strong
+              > en cualquier otro caso donde lo hayas autorizado expresamente y por
+              escrito.
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            No vendemos tus datos. Solo los usan las herramientas técnicas
+            necesarias para que el trabajo funcione, y la ley si nos lo exige.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 7 -->
+    <section id="derechos" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >7</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Tus Derechos sobre tus Datos
+        </h2>
+      </div>
+      <p class="text-slate-600">
+        Como titular de tus datos personales, tienes los siguientes derechos,
+        que puedes ejercer en cualquier momento de forma gratuita escribiéndonos
+        a <a
+          href="mailto:techsitysolutions@gmail.com"
+          class="text-primary hover:underline">techsitysolutions@gmail.com</a
+        >. Responderemos en un máximo de 30 días hábiles:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          [
+            {
+              emoji: "👁️",
+              right: "Acceso",
+              desc: "Conocer qué datos tenemos sobre ti y cómo los tratamos.",
+            },
+            {
+              emoji: "✏️",
+              right: "Rectificación",
+              desc: "Corregir datos inexactos, desactualizados o incompletos.",
+            },
+            {
+              emoji: "🗑️",
+              right: "Supresión",
+              desc: "Solicitar la eliminación de tus datos cuando ya no sean necesarios.",
+            },
+            {
+              emoji: "⏸️",
+              right: "Limitación",
+              desc: "Pedir que restrinjamos temporalmente el uso de tus datos.",
+            },
+            {
+              emoji: "📦",
+              right: "Portabilidad",
+              desc: "Recibir tus datos en formato estructurado y legible por máquina.",
+            },
+            {
+              emoji: "🚫",
+              right: "Oposición",
+              desc: "Oponerte al tratamiento de tus datos en cualquier momento.",
+            },
+          ].map(({ emoji, right, desc }) => (
+            <div class="bg-white border border-gray-200 rounded-xl p-5 hover:border-primary/30 transition-colors">
+              <div class="text-2xl mb-2">{emoji}</div>
+              <p class="font-semibold text-slate-700 text-sm mb-1">{right}</p>
+              <p class="text-slate-500 text-xs leading-relaxed">{desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 8 -->
+    <section id="seguridad" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >8</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Seguridad de los Datos
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div
+          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+        >
+          <p class="text-slate-600">
+            Aplicamos medidas técnicas y organizativas razonables para proteger
+            tus datos frente a acceso no autorizado, pérdida accidental o
+            destrucción, incluyendo:
+          </p>
+          <ul class="text-slate-600 space-y-1.5">
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span>Cifrado de
+              comunicaciones en tránsito mediante HTTPS/TLS.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span>Control de
+              acceso por roles al interior del equipo de trabajo.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span>Copias de
+              seguridad periódicas en entornos de desarrollo.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-primary shrink-0 mt-0.5">•</span>Revisiones de
+              seguridad básicas en los proyectos desarrollados.
+            </li>
+          </ul>
+          <p class="text-slate-600">
+            Pese a estas medidas, ningún sistema de transmisión de datos por
+            internet es completamente seguro. Si sospechamos de una brecha que
+            afecte tus datos, te notificaremos a la mayor brevedad posible.
+          </p>
+        </div>
+        <div
+          class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
+        >
+          <p class="text-xs font-semibold text-accent mb-1">
+            💬 En pocas palabras
+          </p>
+          <p>
+            Usamos conexiones cifradas, acceso restringido y buenas prácticas
+            para proteger tus datos. Si algo sale mal, te avisamos de inmediato.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 9 -->
+    <section id="nda" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >9</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Compromiso de Confidencialidad (NDA)
+        </h2>
+      </div>
+      <div class="bg-secondary rounded-xl p-6 text-white">
+        <p class="text-paragraph text-sm mb-4 leading-relaxed">
+          Más allá de los datos personales, Techsity Solutions asume un
+          compromiso ético y contractual de confidencialidad sobre toda la
+          información de negocio compartida durante el proyecto:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {
+            [
+              {
+                icon: "🛡️",
+                title: "Tu idea es tuya",
+                body: "No usaremos tu modelo de negocio para competirte ni para beneficiar a competidores tuyos.",
+              },
+              {
+                icon: "🔐",
+                title: "Info confidencial",
+                body: "Algoritmos, procesos, precios, datos de clientes — todo bajo secreto profesional.",
+              },
+              {
+                icon: "⏱️",
+                title: "3 años de vigencia",
+                body: "El compromiso continúa 3 años después de finalizar el proyecto, sin excepciones.",
+              },
+            ].map(({ icon, title, body }) => (
+              <div class="bg-white/5 rounded-xl p-4">
+                <div class="text-2xl mb-2">{icon}</div>
+                <p class="font-semibold text-white text-sm mb-1">{title}</p>
+                <p class="text-paragraph text-xs leading-relaxed">{body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-100" />
+
+    <!-- 10 -->
+    <section id="contacto" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+        <span
+          class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+          >10</span
+        >
+        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+          Contacto — Responsable de Privacidad
+        </h2>
+      </div>
+      <div
+        class="bg-white border border-gray-200 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5"
+      >
+        <div class="bg-primary/10 rounded-full p-4 shrink-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-7 text-primary"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect><path
+              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-700 mb-1">
+            Para ejercer tus derechos o consultas sobre privacidad:
+          </p>
+          <a
+            href="mailto:techsitysolutions@gmail.com"
+            class="text-primary hover:underline text-sm font-medium"
+            >techsitysolutions@gmail.com</a
+          >
+          <p class="text-slate-500 text-xs mt-1">
+            Respondemos en un plazo máximo de 30 días hábiles desde la recepción
+            de tu solicitud.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</LegalLayout>
