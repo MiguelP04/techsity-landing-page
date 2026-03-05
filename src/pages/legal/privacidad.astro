@@ -1,5 +1,19 @@
 ---
 import LegalLayout from "../../layouts/LegalLayout.astro";
+import {
+  Lock,
+  MessageCircle,
+  Eye,
+  Pencil,
+  Trash2,
+  Pause,
+  Package,
+  Ban,
+  Shield,
+  Clock,
+  Mail,
+  TriangleAlert,
+} from "lucide-astro";
 
 const sections = [
   { id: "responsable", label: "1. Responsable del Tratamiento" },
@@ -19,13 +33,13 @@ const sections = [
   title="Política de Privacidad y Manejo de Datos"
   sections={sections}
 >
-  <div class="space-y-14 text-sm text-slate-700 leading-relaxed">
+  <div class="space-y-8 sm:space-y-14 text-sm text-slate-700 leading-relaxed">
     <div
       class="relative bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200/60 rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
     >
       <div class="absolute top-0 left-0 w-1 h-full bg-accent rounded-l-2xl">
       </div>
-      <span class="text-2xl shrink-0">🔒</span>
+      <Lock class="size-7 text-blue-600 shrink-0 mt-0.5" strokeWidth="2" />
       <div>
         <p class="font-bold text-blue-800 mb-1">
           Tu privacidad es una prioridad
@@ -142,8 +156,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             Solo te pedimos datos que son básicos para poder responderte y
@@ -276,8 +293,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             Usamos tus datos porque tú nos lo permites al contactarnos, o porque
@@ -302,9 +322,12 @@ const sections = [
         </h2>
       </div>
       <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
-        <p class="font-semibold text-amber-800 mb-2">
-          ⚠️ Cuando el cliente nos da acceso a sus datos
-        </p>
+        <div class="flex items-start gap-2">
+          <TriangleAlert class="size-5 text-amber-600" />
+          <p class="font-semibold text-amber-800 mb-2">
+            Cuando el cliente nos da acceso a sus datos
+          </p>
+        </div>
         <p class="text-amber-700 leading-relaxed">
           Durante el desarrollo o testing de un proyecto, es frecuente que el
           Cliente proporcione acceso a bases de datos que contienen información
@@ -351,8 +374,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             Si nos das acceso a la base de datos de tus usuarios para hacer
@@ -410,8 +436,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             No vendemos tus datos. Solo los usan las herramientas técnicas
@@ -446,38 +475,38 @@ const sections = [
         {
           [
             {
-              emoji: "👁️",
+              Icon: Eye,
               right: "Acceso",
               desc: "Conocer qué datos tenemos sobre ti y cómo los tratamos.",
             },
             {
-              emoji: "✏️",
+              Icon: Pencil,
               right: "Rectificación",
               desc: "Corregir datos inexactos, desactualizados o incompletos.",
             },
             {
-              emoji: "🗑️",
+              Icon: Trash2,
               right: "Supresión",
               desc: "Solicitar la eliminación de tus datos cuando ya no sean necesarios.",
             },
             {
-              emoji: "⏸️",
+              Icon: Pause,
               right: "Limitación",
               desc: "Pedir que restrinjamos temporalmente el uso de tus datos.",
             },
             {
-              emoji: "📦",
+              Icon: Package,
               right: "Portabilidad",
               desc: "Recibir tus datos en formato estructurado y legible por máquina.",
             },
             {
-              emoji: "🚫",
+              Icon: Ban,
               right: "Oposición",
               desc: "Oponerte al tratamiento de tus datos en cualquier momento.",
             },
-          ].map(({ emoji, right, desc }) => (
+          ].map(({ Icon, right, desc }) => (
             <div class="bg-white border border-gray-200 rounded-xl p-5 hover:border-primary/30 transition-colors">
-              <div class="text-2xl mb-2">{emoji}</div>
+              <Icon class="size-6 text-slate-500 mb-3" strokeWidth="2" />
               <p class="font-semibold text-slate-700 text-sm mb-1">{right}</p>
               <p class="text-slate-500 text-xs leading-relaxed">{desc}</p>
             </div>
@@ -535,8 +564,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             Usamos conexiones cifradas, acceso restringido y buenas prácticas
@@ -559,35 +591,47 @@ const sections = [
           Compromiso de Confidencialidad (NDA)
         </h2>
       </div>
-      <div class="bg-secondary rounded-xl p-6 text-white">
-        <p class="text-paragraph text-sm mb-4 leading-relaxed">
-          Más allá de los datos personales, Techsity Solutions asume un
-          compromiso ético y contractual de confidencialidad sobre toda la
-          información de negocio compartida durante el proyecto:
-        </p>
+      <div
+        class="relative bg-gradient-to-br from-slate-50 to-gray-50 border border-slate-200/60 rounded-2xl p-6 pl-8 flex flex-col gap-6 overflow-hidden"
+      >
+        <div
+          class="absolute top-0 left-0 w-1 h-full bg-slate-400 rounded-l-2xl"
+        >
+        </div>
+        <div>
+          <p class="font-bold text-slate-800 mb-1">
+            Protección integral de tu negocio
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Más allá de los datos personales, Techsity Solutions asume un
+            compromiso ético y contractual de confidencialidad sobre toda la
+            información de negocio compartida durante el proyecto:
+          </p>
+        </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {
             [
               {
-                icon: "🛡️",
+                Icon: Shield,
                 title: "Tu idea es tuya",
                 body: "No usaremos tu modelo de negocio para competirte ni para beneficiar a competidores tuyos.",
               },
               {
-                icon: "🔐",
+                Icon: Lock,
                 title: "Info confidencial",
                 body: "Algoritmos, procesos, precios, datos de clientes — todo bajo secreto profesional.",
               },
               {
-                icon: "⏱️",
+                Icon: Clock,
                 title: "3 años de vigencia",
                 body: "El compromiso continúa 3 años después de finalizar el proyecto, sin excepciones.",
               },
-            ].map(({ icon, title, body }) => (
-              <div class="bg-white/5 rounded-xl p-4">
-                <div class="text-2xl mb-2">{icon}</div>
-                <p class="font-semibold text-white text-sm mb-1">{title}</p>
-                <p class="text-paragraph text-xs leading-relaxed">{body}</p>
+            ].map(({ Icon, title, body }) => (
+              <div class="bg-white border border-slate-200/50 rounded-xl p-4 hover:border-primary/20 transition-colors">
+                <Icon class="size-6 text-slate-400 mb-3" strokeWidth="2" />
+                <p class="font-semibold text-slate-700 text-sm mb-1">{title}</p>
+                <p class="text-slate-500 text-xs leading-relaxed">{body}</p>
               </div>
             ))
           }
@@ -612,19 +656,7 @@ const sections = [
         class="bg-white border border-gray-200 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5"
       >
         <div class="bg-primary/10 rounded-full p-4 shrink-0">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-7 text-primary"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-          </svg>
+          <Mail class="size-7 text-primary" strokeWidth="1.5" />
         </div>
         <div>
           <p class="font-semibold text-slate-700 mb-1">
