@@ -3,6 +3,12 @@ import { Linkedin, Github, Instagram, Mail, Phone, MapPin } from "lucide-astro";
 import { Image } from "astro:assets";
 import logo from "../assets/logo_transparent_small.svg";
 
+interface Props {
+  animate?: boolean;
+}
+
+const { animate = true } = Astro.props;
+
 const currentYear = new Date().getFullYear();
 
 const quickLinks = [
@@ -28,7 +34,7 @@ const socials = [
   <div class="max-w-7xl mx-auto px-5 sm:px-6 py-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
       <!-- Brand column -->
-      <div class="reveal slide-up">
+      <div class:list={[{ "reveal slide-up": animate }]}>
         <a href="/" class="text-2xl font-bold flex items-center gap-0.5 mb-5">
           <span
             class="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent"
@@ -70,7 +76,7 @@ const socials = [
       </div>
 
       <!-- Quick Links column -->
-      <div class="reveal slide-up delay-100">
+      <div class:list={[{ "reveal slide-up delay-100": animate }]}>
         <h4 class="text-sm font-semibold tracking-wider text-white mb-6">
           Navegación
         </h4>
@@ -91,7 +97,7 @@ const socials = [
       </div>
 
       <!-- Contact column -->
-      <div class="reveal slide-up delay-200">
+      <div class:list={[{ "reveal slide-up delay-200": animate }]}>
         <h4 class="text-sm font-semibold tracking-wider text-white mb-6">
           Contacto
         </h4>
@@ -130,7 +136,10 @@ const socials = [
 
     <!-- Bottom bar -->
     <div
-      class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-paragraph reveal fade-in delay-300"
+      class:list={[
+        "border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-paragraph",
+        { "reveal fade-in delay-300": animate },
+      ]}
     >
       <p>
         &copy; {currentYear} Techsity Solutions. Todos los derechos reservados.
