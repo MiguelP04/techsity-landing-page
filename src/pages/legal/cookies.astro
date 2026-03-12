@@ -1,5 +1,15 @@
 ---
 import LegalLayout from "../../layouts/LegalLayout.astro";
+import {
+  Cookie,
+  CheckCircle,
+  MessageCircle,
+  Type,
+  Mail,
+  Globe,
+  Compass,
+  Smartphone,
+} from "lucide-astro";
 
 const sections = [
   { id: "que-son", label: "1. ¿Qué son las cookies?" },
@@ -11,13 +21,13 @@ const sections = [
 ---
 
 <LegalLayout title="Política de Cookies" sections={sections}>
-  <div class="space-y-14 text-sm text-slate-700 leading-relaxed">
+  <div class="space-y-8 sm:space-y-14 text-sm text-slate-700 leading-relaxed">
     <div
       class="relative bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/60 rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
     >
       <div class="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-2xl">
       </div>
-      <span class="text-2xl shrink-0">🍪</span>
+      <Cookie class="size-7 text-green-600 shrink-0 mt-0.5" strokeWidth="2" />
       <div>
         <p class="font-bold text-green-800 mb-1">
           Usamos muy pocas cookies y lo explicamos sin tecnicismos
@@ -72,8 +82,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             Las cookies son como pequeñas notas que la web guarda en tu
@@ -153,7 +166,7 @@ const sections = [
       <div
         class="bg-green-50 border border-green-200 rounded-xl p-4 flex items-start gap-3"
       >
-        <span class="text-green-600 text-xl shrink-0">✅</span>
+        <CheckCircle class="size-6 text-green-600 shrink-0" strokeWidth="2.5" />
         <div>
           <p class="font-semibold text-green-800 text-sm mb-1">
             Sin cookies de marketing ni analítica
@@ -189,7 +202,7 @@ const sections = [
       <div class="space-y-4">
         <div class="bg-white border border-gray-200 rounded-xl p-5">
           <div class="flex items-center gap-3 mb-3">
-            <span class="text-2xl">🔤</span>
+            <Type class="size-6 text-slate-700" strokeWidth="2" />
             <div>
               <p class="font-semibold text-slate-700">Google Fonts</p>
               <p class="text-xs text-slate-500">
@@ -220,7 +233,7 @@ const sections = [
 
         <div class="bg-white border border-gray-200 rounded-xl p-5">
           <div class="flex items-center gap-3 mb-3">
-            <span class="text-2xl">📧</span>
+            <Mail class="size-6 text-slate-700" strokeWidth="2" />
             <div>
               <p class="font-semibold text-slate-700">EmailJS</p>
               <p class="text-xs text-slate-500">
@@ -267,8 +280,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             Google Fonts y EmailJS son herramientas externas que usamos para
@@ -306,7 +322,6 @@ const sections = [
           [
             {
               name: "Google Chrome",
-              icon: "🔵",
               url: "https://support.google.com/chrome/answer/95647",
               steps: [
                 "Menú ⋮ → Configuración",
@@ -317,7 +332,6 @@ const sections = [
             },
             {
               name: "Mozilla Firefox",
-              icon: "🦊",
               url: "https://support.mozilla.org/kb/delete-browsing-search-download-history-firefox",
               steps: [
                 "Menú ☰ → Configuración",
@@ -328,7 +342,6 @@ const sections = [
             },
             {
               name: "Microsoft Edge",
-              icon: "🌐",
               url: "https://support.microsoft.com/topic/delete-cookies-in-microsoft-edge-63947406",
               steps: [
                 "Menú … → Configuración",
@@ -338,7 +351,6 @@ const sections = [
             },
             {
               name: "Safari (Mac)",
-              icon: "🧭",
               url: "https://support.apple.com/guide/safari/manage-cookies-sfri11471",
               steps: [
                 "Menú Safari → Preferencias",
@@ -348,7 +360,6 @@ const sections = [
             },
             {
               name: "Safari (iPhone/iPad)",
-              icon: "📱",
               url: "https://support.apple.com/en-us/105082",
               steps: [
                 "Ajustes → Apps → Safari",
@@ -358,7 +369,6 @@ const sections = [
             },
             {
               name: "Opera",
-              icon: "🔴",
               url: "https://help.opera.com/en/latest/web-preferences/",
               steps: [
                 "Menú → Configuración",
@@ -366,12 +376,9 @@ const sections = [
                 "Configuración de cookies",
               ],
             },
-          ].map(({ name, icon, url, steps }) => (
+          ].map(({ name, url, steps }) => (
             <div class="bg-white border border-gray-200 rounded-xl p-5 hover:border-primary/30 transition-colors">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-xl">{icon}</span>
-                <p class="font-semibold text-slate-700 text-sm">{name}</p>
-              </div>
+              <p class="font-semibold text-slate-700 text-sm mb-3">{name}</p>
               <ol class="text-xs text-slate-500 space-y-1 mb-3">
                 {steps.map((step, i) => (
                   <li class="flex items-start gap-1">
@@ -436,8 +443,11 @@ const sections = [
         <div
           class="md:col-span-2 bg-accent/5 border border-accent/20 rounded-xl p-4"
         >
-          <p class="text-xs font-semibold text-accent mb-1">
-            💬 En pocas palabras
+          <p
+            class="flex items-center gap-1.5 text-xs font-semibold text-accent mb-1"
+          >
+            <MessageCircle class="size-3.5" strokeWidth="2.5" />
+            En pocas palabras
           </p>
           <p>
             Si cambia algo importante sobre cómo usamos cookies, lo
@@ -469,18 +479,7 @@ const sections = [
           href="mailto:techsitysolutions@gmail.com"
           class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 active:scale-95 text-white text-sm font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-primary/30"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-              d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-          >
+          <Mail class="size-4" strokeWidth="2.5" />
           Contactar por email
         </a>
       </div>

@@ -1,0 +1,159 @@
+---
+
+---
+
+<div id="preloader" class="preloader">
+  <div class="logo-container">
+    <!-- SVG Placeholder - User will replace this with their actual logo -->
+    <svg
+      viewBox="0 0 182 274"
+      class="loader-svg"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        id="path-s0"
+        class="s0 animated-path"
+        d="m67 7.86c-6.88 4.29-15.88 9.82-20 12.29-4.13 2.47-11.1 6.68-15.5 9.37-4.4 2.68-13.13 8.15-19.4 12.14l-11.39 7.26-0.82 67.58c12.87 7.91 27.52 16.8 40.86 24.86 13.34 8.05 24.81 14.75 25.5 14.89 0.69 0.14 1.59 0.7 1.99 1.25 0.41 0.55 13.24 8.47 28.5 17.59 15.27 9.13 27.72 17 27.68 17.5-0.05 0.5-5.68 4.42-12.5 8.72l-12.42 7.81c-0.78 7.27-0.89 21.87-0.75 37.13l0.25 27.75c3.49-0.78 22.18-11.69 43.79-24.75l39.3-23.75-0.09-68.5c-6.59-3.84-34.56-20.61-66.4-39.73-31.85-19.12-57.89-35.22-57.88-35.77 0.01-0.55 5.59-4.3 12.4-8.34 6.81-4.04 12.71-7.87 13.11-8.5 0.41-0.64 0.75-15.45 0.75-32.91l0.02-31.75c-3.49 0.04-10.12 3.56-17 7.86z"
+      ></path>
+      <path
+        id="path-s1"
+        class="s1 animated-path"
+        d="m99 45.5v45.5c3.49 2.12 17.55 10.51 33.5 20.02 15.95 9.5 33.05 19.83 38 22.95 4.95 3.12 9.56 5.98 10.25 6.35 0.99 0.54 1.26-8.89 1.29-45.57l0.05-46.25c-57.03-34.45-74.94-45.36-76.59-46.47-1.65-1.11-3.79-2.02-4.75-2.02-1.64-0.01-1.75 2.82-1.75 45.49z"
+      ></path>
+      <path
+        id="path-s2"
+        class="s2 animated-path"
+        d="m0 179.5v44.5c5.04 3.67 16.29 10.64 28.25 17.87 11.96 7.22 21.76 12.79 21.77 12.38 0-0.41 0.34-0.26 0.75 0.33 0.4 0.59 7.48 5.21 15.73 10.26 8.25 5.05 15.56 9.18 16.25 9.17 0.98-0.01 1.25-9.58 1.25-44.51 0-41.12-0.13-44.62-1.75-46.05-0.96-0.86-19.41-12.11-41-25-21.59-12.9-39.7-23.45-40.25-23.45-0.65 0-1 15.5-1 44.5z"
+      ></path>
+    </svg>
+  </div>
+</div>
+
+<style>
+  :root {
+    --loader-bg: #f3f4f6;
+    --accent-color: #ffffff;
+    --glow-color: rgba(255, 255, 255, 0.8);
+    --s0-color: #85bd2d;
+    --s1-color: #189cd2;
+    --s2-color: #193f7a;
+  }
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--loader-bg);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+      opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .logo-container {
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+
+  .loader-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Base styles for SVG paths using existing colors */
+  .s0 {
+    fill: var(--s0-color);
+    opacity: 0.9;
+  }
+  .s1 {
+    fill: var(--s1-color);
+    opacity: 0.9;
+  }
+  .s2 {
+    fill: var(--s2-color);
+    opacity: 0.9;
+  }
+
+  /* Animated light streak effect */
+  .animated-path {
+    stroke: var(--accent-color);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 5px var(--glow-color));
+    stroke-dasharray: 100 1000; /* Short segment of light */
+    stroke-dashoffset: 0;
+    animation: lightStreak 3s linear infinite;
+  }
+
+  #path-s1 {
+    animation-delay: 0.5s;
+  }
+  #path-s2 {
+    animation-delay: 1s;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes lightStreak {
+    0% {
+      stroke-dashoffset: 1100;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  /* Accessibility: Prevent scroll when loader is active */
+  :global(body.loading) {
+    overflow: hidden !important;
+  }
+</style>
+
+<script is:inline>
+  // Add loading class to body immediately
+  document.body.classList.add("loading");
+</script>
+
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      // Small delay to ensure smooth start
+      setTimeout(() => {
+        preloader.classList.add("hidden");
+        document.body.classList.remove("loading");
+
+        // Remove from DOM after transition to avoid any impact
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 800);
+      }, 500);
+    }
+  });
+</script>

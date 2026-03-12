@@ -1,7 +1,14 @@
 ---
-import { Linkedin, Github, Instagram, Mail, Phone, MapPin } from "lucide-astro";
+import { Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-astro";
 import { Image } from "astro:assets";
 import logo from "../assets/logo_transparent_small.svg";
+import TikTok from "./icons/TikTok.astro";
+
+interface Props {
+  animate?: boolean;
+}
+
+const { animate = true } = Astro.props;
 
 const currentYear = new Date().getFullYear();
 
@@ -14,13 +21,21 @@ const quickLinks = [
 ];
 
 const socials = [
-  { Icon: Linkedin, href: "#", label: "LinkedIn" },
+  {
+    Icon: Linkedin,
+    href: "https://www.linkedin.com/in/techsity-solutions-dev/",
+    label: "LinkedIn",
+  },
   {
     Icon: Instagram,
     href: "https://www.instagram.com/techsity_oficial/?igsh=1",
     label: "Instagram",
   },
-  { Icon: Github, href: "#", label: "GitHub" },
+  {
+    Icon: TikTok,
+    href: "https://www.tiktok.com/@techsitysolutions",
+    label: "TikTok",
+  },
 ];
 ---
 
@@ -28,7 +43,7 @@ const socials = [
   <div class="max-w-7xl mx-auto px-5 sm:px-6 py-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
       <!-- Brand column -->
-      <div class="reveal slide-up">
+      <div class:list={[{ "reveal slide-up": animate }]}>
         <a href="/" class="text-2xl font-bold flex items-center gap-0.5 mb-5">
           <span
             class="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent"
@@ -70,7 +85,7 @@ const socials = [
       </div>
 
       <!-- Quick Links column -->
-      <div class="reveal slide-up delay-100">
+      <div class:list={[{ "reveal slide-up delay-100": animate }]}>
         <h4 class="text-sm font-semibold tracking-wider text-white mb-6">
           Navegación
         </h4>
@@ -91,7 +106,7 @@ const socials = [
       </div>
 
       <!-- Contact column -->
-      <div class="reveal slide-up delay-200">
+      <div class:list={[{ "reveal slide-up delay-200": animate }]}>
         <h4 class="text-sm font-semibold tracking-wider text-white mb-6">
           Contacto
         </h4>
@@ -109,7 +124,7 @@ const socials = [
           </li>
           <li>
             <a
-              href="https://wa.me/584246209421?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+              href="https://wa.me/584246209421?text=%C2%A1Hola%20Techsity!%20Vengo%20desde%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20conocer%20c%C3%B3mo%20pueden%20ayudarme%20a%20transformar%20mi%20proyecto%20con%20tecnolog%C3%ADa%20de%20vanguardia."
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center space-x-3 text-paragraph hover:text-primary transition-colors group"
@@ -130,7 +145,10 @@ const socials = [
 
     <!-- Bottom bar -->
     <div
-      class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-paragraph reveal fade-in delay-300"
+      class:list={[
+        "border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-paragraph",
+        { "reveal fade-in delay-300": animate },
+      ]}
     >
       <p>
         &copy; {currentYear} Techsity Solutions. Todos los derechos reservados.
