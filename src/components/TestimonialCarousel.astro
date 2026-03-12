@@ -5,6 +5,7 @@ const team = [
     profession: "systems engineer",
     position: "CEO & Full Stack Developer",
     image: "/team/JOSE.jpeg",
+    photoPosition: "center 30%",
     review: "Soy CEO de Techsity, una empresa dedicada al desarrollo de software. Me apasiona la tecnología y la innovación, tengo años de experiencia en el mercado de tecnologia con capacidad para adaptarse a tendencias emergentes",
     socials: {
       github: "https://github.com/joseruizvene",
@@ -17,6 +18,7 @@ const team = [
     profession: "Ingeniero de Sistemas",
     position: "CTO & Full Stack Developer",
     image: "/team/WILLIAM2.jpg",
+    photoPosition: "center center",
     review: "En Techsity lidero la visión tecnológica y el desarrollo de nuestra arquitectura. Me enfoco en diseñar software de alta calidad y soluciones innovadoras que impulsen el éxito de nuestros clientes, respaldadas por un código limpio y escalable.",
     socials: {
       github: "https://github.com/Williamp0403",
@@ -29,6 +31,7 @@ const team = [
     profession: "Ingeniero de Sistemas",
     position: "Co-founder & Full Stack Developer",
     image: "/team/MIGUEL.jpeg",
+    photoPosition: "center center",
     review: "En Techsity, determinamos las estrategias y herramientas que automatizan tu negocio. Mi compromiso es ser el socio técnico que te ayude a resolver tareas complejas y a escalar profesionalmente mediante la innovación y el acompañamiento constante.",
     socials: {
       github: "https://github.com/MiguelP04",
@@ -87,6 +90,7 @@ const team = [
                 alt={`Retrato de ${member.name}`} 
                 class="w-full h-full object-cover grayscale opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100 group-hover:mix-blend-normal mix-blend-screen" 
                 src={member.image}
+                style={`object-position: ${member.photoPosition};`}
               />
             </div>
             
