@@ -28,9 +28,19 @@ const {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Anti-FOUC: aplica .dark antes del primer render -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (stored === "dark" || (!stored && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
   </head>
   <body
-    class="bg-gray-50 text-slate-900 font-sans antialiased selection:bg-primary/30 selection:text-primary overflow-x-hidden"
+    class="bg-surface text-heading font-sans antialiased selection:bg-primary/30 selection:text-primary overflow-x-hidden transition-colors duration-300"
   >
     <Preloader />
     <slot />
