@@ -50,6 +50,10 @@ html {
   /* bordes medios (gray-200) */
   --color-border-input: #f3f4f6;
   /* bordes inputs (gray-300) */
+
+  /* ── Footer ── */
+  --color-footer-bg: #0d1f3c;
+  /* Azul luxury profundo — más oscuro que secondary */
 }
 
 /* ═══════════════════════════════════════
@@ -70,7 +74,7 @@ html {
   --color-heading: #f8fafc;
   --color-body: #cbd5e1; /* slate-300 - Más claro/legible */
   --color-body-secondary: #94a3b8; /* slate-400 - Más tenue */
-  --color-muted: #64748b; /* slate-500 */
+  --color-muted: #8899aa; /* Más claro que el muted del modo claro — sutil pero visible */
 
   /* Borders — Ajustados para el nuevo tono */
   --color-border: #1a1a1a;
@@ -79,6 +83,9 @@ html {
 
   /* Preloader */
   --loader-bg: #060606;
+
+  /* Footer — azul luxury aún más profundo en dark mode */
+  --color-footer-bg: #060e1a;
 }
 
 /* Animations: Scroll Reveal System */
