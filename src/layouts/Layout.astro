@@ -5,23 +5,102 @@ import Preloader from "../components/Preloader.astro";
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
 }
 
 const {
   title,
-  description = "Techsity Solutions - Innovative Tech Solutions",
+  description = "Techsity Solutions ofrece servicios de transformación digital, desarrollo web, inteligencia artificial y soluciones tecnológicas innovadoras para empresas en Latinoamérica.",
+  keywords = "transformación digital, desarrollo web, inteligencia artificial, soluciones tecnológicas, software empresarial, Techsity, tecnología, innovación",
+  canonicalUrl = Astro.url.href,
+  ogImage = "/og_image.png",
 } = Astro.props;
+
+const siteUrl = "https://techsity.com.ve";
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/logo_favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+
+    <!-- SEO Primario -->
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Techsity Solutions" />
+    <meta
+      name="robots"
+      content="index, follow"
+    /><!-- Indica que la página debe ser indexada y seguir sus links -->
+    <link
+      rel="canonical"
+      href={canonicalUrl}
+    /><!-- Evita contenido duplicado indicando la URL original -->
+
+    <!-- Metadatos adicionales -->
+    <meta name="theme-color" content="#87be30" />
+    <!-- Color de la barra de navegación en móviles -->
+    <meta name="geo.region" content="VE" />
+    <!-- Indica la región del sitio -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- Enlace al sitemap -->
+
+    <!-- Open Graph: Cómo se ve la página al compartir en WhatsApp, Facebook, LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <!-- Imagen que aparece en el preview -->
+    <meta
+      property="og:image:width"
+      content="1200"
+    /><!-- Dimensiones optimizadas para LinkedIn/FB -->
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:site_name" content="Techsity Solutions" />
+    <meta property="og:locale" content="es_VE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- JSON-LD: Datos estructurados para el "Knowledge Graph" de Google (mejora los resultados de búsqueda) -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Techsity Solutions",
+        url: siteUrl,
+        logo: `${siteUrl}/logo_favicon.svg`,
+        description: description,
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "VE",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          availableLanguage: "Spanish",
+        },
+        sameAs: [
+          // Concatena la marca con las redes sociales oficiales
+          "https://www.linkedin.com/in/techsity-solutions-dev/",
+          "https://www.instagram.com/techsity_oficial/",
+          "https://www.tiktok.com/@techsitysolutions",
+        ],
+      })}
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
