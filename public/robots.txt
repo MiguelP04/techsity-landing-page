@@ -1,0 +1,8 @@
+# robots.txt - Techsity Solutions
+# https://techsity.com.ve
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://techsity.com.ve/sitemap-index.xml
