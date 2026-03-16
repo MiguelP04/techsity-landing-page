@@ -62,8 +62,8 @@ html {
    ═══════════════════════════════════════ */
 .dark {
   /* Brand — Ajustado para el nuevo fondo neutral */
-  --color-primary: #92c430;
-
+  --color-primary: #6cb824;
+  --color-secondary: #1e40af; /* Azul medio/oscuro (Blue-600 de Tailwind) */
   /* Surfaces — Dark Gray Neutral (más profundidad que el negro puro) */
   --color-surface: #060606; /* Un poco más claro que el negro puro */
   --color-surface-alt: #0c0c0c; /* Secciones alternas */
@@ -144,4 +144,30 @@ html {
 .reveal.active {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* ═══════════════════════════════════════
+   Custom Scrollbar (Theme Aware)
+   ═══════════════════════════════════════ */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-medium);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-body-secondary);
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-medium) transparent;
 }

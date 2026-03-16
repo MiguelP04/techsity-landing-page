@@ -16,18 +16,18 @@ const sections = [
 ---
 
 <LegalLayout title="Términos y Condiciones de Servicio" sections={sections}>
-  <div class="space-y-8 sm:space-y-14 text-sm text-slate-700 leading-relaxed">
+  <div class="space-y-8 sm:space-y-14 text-sm text-body leading-relaxed">
     <div
-      class="relative bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/60 rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
+      class="relative bg-linear-to-br bg-surface-card/50 border border-border rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
     >
-      <div class="absolute top-0 left-0 w-1 h-full bg-amber-400 rounded-l-2xl">
+      <div class="absolute top-0 left-0 w-1 h-full bg-accent rounded-l-2xl">
       </div>
-      <Scale class="size-7 text-amber-600 shrink-0 mt-0.5" strokeWidth="2" />
+      <Scale class="size-7 text-accent shrink-0 mt-0.5" strokeWidth="2" />
       <div>
-        <p class="font-bold text-amber-800 mb-1">
+        <p class="font-bold text-accent mb-1">
           Lea con atención antes de contratar
         </p>
-        <p class="text-amber-700 leading-relaxed">
+        <p class="text-accent leading-relaxed">
           Al solicitar un presupuesto, firmar una propuesta o efectuar cualquier
           pago a Techsity Solutions, el Cliente acepta íntegramente estos
           términos. Este documento es un contrato vinculante entre <strong
@@ -39,30 +39,32 @@ const sections = [
 
     <!-- 1 -->
     <section id="alcance" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >1</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Alcance de los Servicios
         </h2>
       </div>
-      <p class="text-slate-600">
+      <p class="text-body">
         Techsity Solutions ofrece servicios de desarrollo de software a medida.
         El alcance acordado para cada proyecto se documenta en la propuesta
         comercial aprobada. Cualquier trabajo fuera de ese alcance se cotiza y
         aprueba por separado antes de ejecutarse.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-green-50 border border-green-200 rounded-xl p-5">
+        <div
+          class="bg-green-50/50 dark:bg-green-900/10 border border-green-200 dark:border-green-900/30 rounded-xl p-5"
+        >
           <p
-            class="flex items-center gap-1.5 text-xs font-bold text-green-700 uppercase tracking-wide mb-3"
+            class="flex items-center gap-1.5 text-xs font-bold text-green-700 dark:text-green-500 uppercase tracking-wide mb-3"
           >
             <Check class="size-4" strokeWidth="2.5" />
             Incluido por defecto
           </p>
-          <ul class="space-y-2 text-slate-700">
+          <ul class="space-y-2 text-body">
             <li class="flex items-start gap-2">
               <span class="text-green-500 shrink-0 mt-0.5">•</span>Análisis,
               diseño y arquitectura de la solución
@@ -89,14 +91,16 @@ const sections = [
             </li>
           </ul>
         </div>
-        <div class="bg-red-50 border border-red-200 rounded-xl p-5">
+        <div
+          class="bg-red-50/50 dark:bg-red-900/10 border border-red-200 dark:border-red-900/30 rounded-xl p-5"
+        >
           <p
-            class="flex items-center gap-1.5 text-xs font-bold text-red-700 uppercase tracking-wide mb-3"
+            class="flex items-center gap-1.5 text-xs font-bold text-red-700 dark:text-red-400 uppercase tracking-wide mb-3"
           >
             <X class="size-4" strokeWidth="2.5" />
             No incluido (salvo acuerdo)
           </p>
-          <ul class="space-y-2 text-slate-700">
+          <ul class="space-y-2 text-body">
             <li class="flex items-start gap-2">
               <span class="text-red-400 shrink-0 mt-0.5">•</span>Hosting,
               servidores o dominios
@@ -126,12 +130,12 @@ const sections = [
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5"
         >
-          <p class="font-semibold text-slate-700 mb-2">
+          <p class="font-semibold text-heading mb-2">
             Solicitudes de cambio (Change Requests)
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Cualquier trabajo adicional fuera del alcance original constituye
             una Solicitud de Cambio. La Empresa evaluará el impacto en tiempo y
             costo, y entregará una cotización por escrito. El proyecto no avanza
@@ -156,33 +160,33 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 2 -->
     <section id="pi" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >2</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Propiedad Intelectual
         </h2>
       </div>
-      <p class="text-slate-600">
+      <p class="text-body">
         La propiedad intelectual es el punto más crítico de un contrato de
         software. Esta sección define con claridad quién es dueño del código y
         en qué momento exacto se produce esa transferencia.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-4"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-4"
         >
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               2.1 Transferencia de propiedad al Cliente
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Al completar el pago del <strong>100% del valor acordado</strong>,
               todos los derechos de propiedad intelectual sobre el código
               fuente, diseños e interfaces desarrollados específicamente para el
@@ -193,10 +197,10 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               2.2 Frameworks y componentes genéricos
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Techsity Solutions puede reutilizar frameworks de código abierto,
               librerías estándar y componentes de UI no exclusivos en otros
               proyectos. La lógica de negocio, algoritmos propietarios e
@@ -205,8 +209,8 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">2.3 Portafolio</p>
-            <p class="text-slate-600">
+            <p class="font-semibold text-heading mb-1">2.3 Portafolio</p>
+            <p class="text-body">
               Podemos mencionar al Cliente como referencia y mostrar capturas
               del proyecto en nuestro portafolio sin divulgar información
               confidencial. Si el Cliente desea no aparecer en el portafolio,
@@ -233,28 +237,28 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 3 -->
     <section id="pagos" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >3</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Pagos y Facturación
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-4"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-4"
         >
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               3.1 Estructura estándar
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               <strong>50% al inicio</strong> del proyecto (anticipo para reservar
               capacidad y arrancar el desarrollo) y <strong
                 >50% a la entrega final</strong
@@ -263,8 +267,8 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">3.2 Plazos y mora</p>
-            <p class="text-slate-600">
+            <p class="font-semibold text-heading mb-1">3.2 Plazos y mora</p>
+            <p class="text-body">
               Las facturas vencen a los <strong>5 días hábiles</strong> de su emisión.
               El incumplimiento habilita a Techsity Solutions a suspender temporalmente
               el proyecto y aplicar un cargo por mora del <strong
@@ -274,10 +278,10 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               3.3 Proyectos pausados por el Cliente
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Si el Cliente pausa el proyecto por más de <strong
                 >30 días corridos</strong
               >, se factura el trabajo completado. La reanudación queda sujeta a
@@ -305,36 +309,36 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 4 -->
     <section id="aceptacion" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >4</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Aceptación de Entregables
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-3"
         >
-          <p class="text-slate-600">
+          <p class="text-body">
             Cuando notifiquemos la entrega de un sprint, módulo o entregable
             final, el Cliente dispondrá de <strong>5 días hábiles</strong> para revisar
             el trabajo y comunicar por escrito observaciones puntuales con base en
             los requerimientos acordados.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Transcurrido ese plazo sin respuesta, el entregable se considerará <strong
               >tácitamente aceptado</strong
             > y se procederá al siguiente hito o a la facturación. Este mecanismo
             evita que los proyectos queden paralizados por falta de feedback.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Las correcciones dentro del alcance original se realizan sin costo
             adicional. Los cambios que alteren funcionalidades o requerimientos
             acordados serán tratados como Solicitudes de Cambio y facturados
@@ -358,28 +362,28 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 5 -->
     <section id="responsabilidad" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >5</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Limitación de Responsabilidad
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-4"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-4"
         >
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               5.1 Lucro cesante y daños indirectos
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Techsity Solutions no será responsable por <strong
                 >lucro cesante</strong
               >, pérdidas de ingresos, daños a la reputación, pérdida de
@@ -390,10 +394,10 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               5.2 Seguridad post-entrega
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Una vez entregado el software y operado en la infraestructura del
               Cliente, Techsity Solutions no asume responsabilidad por brechas
               de seguridad, ataques cibernéticos (ransomware, DDoS, SQL
@@ -403,10 +407,10 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               5.3 Tope máximo de responsabilidad
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               En cualquier escenario, la responsabilidad máxima de Techsity
               Solutions queda limitada al <strong
                 >monto total efectivamente pagado</strong
@@ -433,70 +437,80 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 6 -->
     <section id="garantia" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >6</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Garantía y Soporte Técnico
         </h2>
       </div>
-      <p class="text-slate-600">
+      <p class="text-body">
         Estamos comprometidos con la calidad del software que entregamos. La
         siguiente tabla resume las condiciones de garantía y soporte
         post-entrega aplicables a todos los proyectos:
       </p>
-      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+      <div
+        class="overflow-x-auto rounded-xl bg-surface-card border border-border shadow-sm"
+      >
         <table class="w-full text-sm">
           <thead>
-            <tr class="bg-secondary text-white">
+            <tr class="bg-secondary text-slate-300">
               <th class="text-left px-5 py-3 font-semibold">Concepto</th>
               <th class="text-left px-5 py-3 font-semibold">Condición</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-gray-50">
-              <td class="px-5 py-4 font-medium text-slate-700"
+          <tbody class="divide-y divide-border">
+            <tr
+              class="hover:bg-surface-card filter brightness-95 dark:brightness-110"
+            >
+              <td class="px-5 py-4 font-medium text-heading"
                 >Garantía de bugs</td
               >
-              <td class="px-5 py-4 text-slate-600"
+              <td class="px-5 py-4 text-body"
                 ><strong>3 meses</strong> desde la entrega aprobada. Cubre errores
                 que impidan el funcionamiento correcto de funcionalidades del alcance
                 original. No incluye nuevas funcionalidades. Es gratuita.</td
               >
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-5 py-4 font-medium text-slate-700"
+            <tr
+              class="hover:bg-surface-card filter brightness-95 dark:brightness-110"
+            >
+              <td class="px-5 py-4 font-medium text-heading"
                 >Tiempo de respuesta</td
               >
-              <td class="px-5 py-4 text-slate-600"
+              <td class="px-5 py-4 text-body"
                 ><strong>24 h hábiles</strong> para incidencias críticas (sistema
                 caído). <strong>48 h</strong> para incidencias medias. <strong
                   >5 días</strong
                 > para mejoras menores.</td
               >
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-5 py-4 font-medium text-slate-700"
+            <tr
+              class="hover:bg-surface-card filter brightness-95 dark:brightness-110"
+            >
+              <td class="px-5 py-4 font-medium text-heading"
                 >Exclusiones de garantía</td
               >
-              <td class="px-5 py-4 text-slate-600"
+              <td class="px-5 py-4 text-body"
                 >La garantía se anula si el Cliente o un tercero modifica el
                 código sin autorización, si el error proviene de integraciones
                 externas al proyecto, o si el Cliente actualiza dependencias sin
                 seguir el procedimiento recomendado.</td
               >
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-5 py-4 font-medium text-slate-700"
+            <tr
+              class="hover:bg-surface-card filter brightness-95 dark:brightness-110"
+            >
+              <td class="px-5 py-4 font-medium text-heading"
                 >Soporte extendido</td
               >
-              <td class="px-5 py-4 text-slate-600"
+              <td class="px-5 py-4 text-body"
                 >Disponible como plan mensual (SLA personalizado). Incluye
                 mantenimiento preventivo, actualización de dependencias y pool
                 de horas mensuales. Se cotiza según complejidad del sistema.</td
@@ -507,28 +521,28 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 7 -->
     <section id="nda" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >7</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Confidencialidad y Acuerdo de No Divulgación (NDA)
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-4"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-4"
         >
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               7.1 Información confidencial
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Se considera confidencial: modelos de negocio, algoritmos
               propietarios, listas de clientes y proveedores, datos de precios y
               márgenes, bases de datos de usuarios, credenciales de sistemas,
@@ -537,10 +551,10 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               7.2 Compromiso de no competencia
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Techsity Solutions se compromete a no utilizar la idea de negocio,
               modelo operativo o información estratégica del Cliente para
               desarrollar un producto competidor ni para beneficiar a un tercero
@@ -548,10 +562,10 @@ const sections = [
             </p>
           </div>
           <div>
-            <p class="font-semibold text-slate-700 mb-1">
+            <p class="font-semibold text-heading mb-1">
               7.3 Duración del secreto
             </p>
-            <p class="text-slate-600">
+            <p class="text-body">
               Las obligaciones de no divulgación permanecen vigentes durante el
               contrato y por <strong>3 años</strong> adicionales tras su finalización,
               cualquiera sea la causa de terminación.
@@ -576,29 +590,29 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 8 -->
     <section id="vigencia" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >8</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Vigencia y Terminación
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-3"
         >
-          <p class="text-slate-600">
+          <p class="text-body">
             El contrato entra en vigor al aceptar la propuesta y pagar el
             anticipo, y se extiende hasta la entrega final aprobada y el pago
             total.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Cualquier parte puede rescindir con <strong
               >15 días de aviso escrito</strong
             >. El Cliente pagará el trabajo completado hasta esa fecha. Si el
@@ -606,7 +620,7 @@ const sections = [
             devolverá el proporcional del anticipo correspondiente al trabajo no
             entregado.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Si la rescisión se debe a incumplimiento del Cliente (falta de pago
             reiterada, obstrucción del trabajo), Techsity Solutions puede dar
             por terminado el contrato de forma inmediata, reteniendo los pagos
@@ -630,30 +644,30 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 9 -->
     <section id="ley" class="scroll-mt-24 space-y-5">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >9</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Ley Aplicable y Resolución de Disputas
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-3"
         >
-          <p class="text-slate-600">
+          <p class="text-body">
             El contrato se rige por las leyes de la <strong
               >República Bolivariana de Venezuela</strong
             >. Para clientes en el extranjero, la ley aplicable se acordará en
             el contrato específico.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Ante cualquier controversia, las partes intentarán una resolución
             amistosa mediante <strong>mediación en un plazo de 30 días</strong>.
             De no llegarse a acuerdo, se acudirá a los tribunales competentes de
