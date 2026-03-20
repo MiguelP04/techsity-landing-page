@@ -56,16 +56,16 @@ const services = [
 ];
 ---
 
-<section id="servicios" class="py-24 bg-gray-100">
+<section id="servicios" class="py-24 bg-surface-alt">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 overflow-hidden">
       <h2
-        class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl reveal slide-left"
+        class="text-3xl font-bold tracking-tight text-heading sm:text-4xl reveal slide-left"
       >
         Nuestros Servicios
       </h2>
       <p
-        class="mt-4 max-w-2xl mx-auto text-xl text-gray-500 reveal slide-right delay-200"
+        class="mt-4 max-w-2xl mx-auto text-xl text-body reveal slide-right delay-200"
       >
         Soluciones integrales diseñadas para cada etapa de tu crecimiento
         digital.
@@ -79,20 +79,21 @@ const services = [
             index % 2 === 0 ? "slide-left" : "slide-right";
           return (
             <div
-              class={`group p-8 bg-white rounded-2xl border border-gray-100 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1 cursor-default flex flex-col h-full reveal ${animationDirection} delay-${((index % 2) + 1) * 100}`}
+              class={`group p-8 bg-surface-card rounded-2xl border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1 cursor-default flex flex-col h-full reveal ${animationDirection} delay-${((index % 2) + 1) * 100}`}
+              style="border-color: var(--color-border);"
             >
-              <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div class="w-14 h-14 bg-surface-card rounded-xl shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
                 <service.Icon class="w-8 h-8" />
               </div>
-              <h3 class="text-xl font-bold text-secondary mb-3">
+              <h3 class="text-xl font-bold text-heading mb-3">
                 {service.title}
               </h3>
-              <p class="text-paragraph leading-relaxed text-sm mb-6 grow">
+              <p class="text-body leading-relaxed text-sm mb-6 grow">
                 {service.description}
               </p>
               <ul class="space-y-3">
                 {service.benefits.map((benefit) => (
-                  <li class="flex items-start text-sm text-gray-600">
+                  <li class="flex items-start text-sm text-body-secondary">
                     <CheckCircle2 class="w-5 h-5 text-primary mr-3 shrink-0 mt-0.5" />
                     <span>{benefit}</span>
                   </li>
@@ -106,12 +107,13 @@ const services = [
 
     <div class="mt-16 text-center">
       <div
-        class="bg-white rounded-2xl p-8 md:p-10 border border-gray-200/60 shadow-sm max-w-4xl mx-auto reveal slide-up delay-200"
+        class="bg-surface-card rounded-2xl p-8 md:p-10 border max-w-4xl mx-auto reveal slide-up delay-200"
+        style="border-color: var(--color-border-medium);"
       >
-        <h3 class="text-2xl font-bold text-slate-900 mb-3">
+        <h3 class="text-2xl font-bold text-heading mb-3">
           ¿Tienes un proyecto diferente en mente?
         </h3>
-        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p class="text-body-secondary mb-8 max-w-2xl mx-auto">
           No nos limitamos a lo estándar. Desarrollamos software a medida
           adaptado 100% a las necesidades del cliente.
         </p>

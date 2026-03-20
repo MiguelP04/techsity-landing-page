@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Enable .dark class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -17,11 +20,72 @@ html {
   /* Azul Cyan */
 
   /* Text & UI Colors */
-  --color-paragraph: #8592a5;
-  /* Gris oscuro para párrafos */
-  --color-paragraph-light: #adb5bd;
   --color-field: #ced4da;
   /* Gris claro para campos/bordes */
+
+  /* ── Semantic Surface Tokens ── */
+  --color-surface: #f9fafb;
+  /* body / sección principal (gray-50) */
+  --color-surface-alt: #f3f4f6;
+  /* secciones alternas (gray-100) */
+  --color-surface-card: #ffffff;
+  /* cards, form containers */
+  --color-surface-nav: rgba(255, 255, 255, 0.8);
+  /* navbar con backdrop-blur */
+
+  /* ── Semantic Text Tokens ── */
+  --color-heading: #0f172a;
+  /* títulos (slate-900) */
+  --color-body: #4b5563;
+  /* cuerpo de texto principal (gray-600) */
+  --color-body-secondary: #6b7280;
+  /* texto secundario (gray-500) */
+  --color-muted: #9ca3af;
+  /* texto sutil (gray-400) */
+
+  /* ── Semantic Border Tokens ── */
+  --color-border: #e5e7eb;
+  /* bordes suaves (gray-100) */
+  --color-border-medium: #d1d5db;
+  /* bordes medios (gray-200) */
+  --color-border-input: #f3f4f6;
+  /* bordes inputs (gray-300) */
+
+  /* ── Footer ── */
+  --color-footer-bg: #0d1f3c;
+  /* Azul luxury profundo — más oscuro que secondary */
+}
+
+/* ═══════════════════════════════════════
+   Dark Mode Overrides
+   Activado al agregar clase .dark al <html>
+   ═══════════════════════════════════════ */
+.dark {
+  /* Brand — Ajustado para el nuevo fondo neutral */
+  --color-primary: #92c430;
+
+  /* Surfaces — Dark Gray Neutral (más profundidad que el negro puro) */
+  --color-surface: #060606; /* Un poco más claro que el negro puro */
+  --color-surface-alt: #0c0c0c; /* Secciones alternas */
+  --color-surface-card: #121212; /* Cards */
+  --color-surface-nav: #060606;
+
+  /* Text */
+  --color-heading: #f8fafc;
+  --color-body: #cbd5e1; /* slate-300 - Más claro/legible */
+  --color-body-secondary: #94a3b8; /* slate-400 - Más tenue */
+  --color-muted: #8899aa; /* Más claro que el muted del modo claro — sutil pero visible */
+
+  /* Borders — Ajustados para el nuevo tono */
+  --color-border: #1a1a1a;
+  --color-border-medium: #222222;
+  --color-border-input: #2d2d2d;
+
+  /* Preloader */
+  --loader-bg: #060606;
+
+  /* Footer — azul luxury aún más profundo en dark mode */
+  --color-footer-bg: #060e1a;
 }
 
 /* Animations: Scroll Reveal System */

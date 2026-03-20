@@ -33,7 +33,10 @@ const benefits = [
 ];
 ---
 
-<section id="por-que-elegirnos" class="py-24 bg-white relative overflow-hidden">
+<section
+  id="por-que-elegirnos"
+  class="py-24 bg-surface relative overflow-hidden"
+>
   <!-- Decorative background elements -->
   <div class="absolute inset-0 pointer-events-none">
     <div
@@ -55,12 +58,12 @@ const benefits = [
         Nuestras Ventajas
       </span>
       <h2
-        class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-6 reveal slide-right"
+        class="text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-6 reveal slide-right"
       >
         ¿Por qué elegirnos?
       </h2>
       <p
-        class="max-w-2xl mx-auto text-lg text-paragraph leading-relaxed reveal slide-left delay-200"
+        class="max-w-2xl mx-auto text-lg text-body leading-relaxed reveal slide-left delay-200"
       >
         Nos distinguimos por nuestra dedicación a transformar ideas en
         soluciones digitales que generan resultados reales y medibles.
@@ -79,12 +82,15 @@ const benefits = [
               class={`group relative reveal ${animationDirection} delay-100`}
             >
               {/* Card */}
-              <div class="relative h-full p-8 lg:p-10 bg-linear-to-br from-gray-50 to-white rounded-3xl border border-gray-100 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden">
+              <div
+                class="relative h-full p-8 lg:p-10 bg-linear-to-br from-surface-alt to-surface rounded-3xl border hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 overflow-hidden"
+                style="border-color: var(--color-border);"
+              >
                 {/* Animated gradient overlay on hover */}
                 <div class="absolute inset-0 bg-linear-to-br from-primary/0 to-secondary/0 group-hover:from-primary/5 group-hover:to-secondary/5 transition-all duration-500" />
 
                 {/* Number indicator */}
-                <div class="absolute top-6 right-6 text-7xl font-bold text-gray-200 group-hover:text-primary/50 transition-colors duration-500 select-none">
+                <div class="absolute top-6 right-6 text-7xl font-bold text-border group-hover:text-primary/50 transition-colors duration-500 select-none">
                   0{index + 1}
                 </div>
 
@@ -95,11 +101,11 @@ const benefits = [
                   </div>
 
                   {/* Content */}
-                  <h3 class="text-2xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 class="text-2xl font-bold text-heading mb-3 group-hover:text-primary transition-colors duration-300">
                     {benefit.title}
                   </h3>
 
-                  <p class="text-paragraph leading-relaxed mb-4">
+                  <p class="text-body leading-relaxed mb-4">
                     {benefit.description}
                   </p>
 
