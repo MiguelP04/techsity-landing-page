@@ -139,10 +139,7 @@ const faqCategories = [
               aria-labelledby={`tab-${cat.id}`}
               class={`faq-panel ${i !== 0 ? "hidden" : ""}`}
             >
-              <div
-                class="divide-y"
-                style="border-color: var(--color-border-medium);"
-              >
+              <div class="divide-y" style="border-color: var(--color-border-medium);">
                 {cat.questions.map((item) => (
                   <div class="faq-item py-1">
                     <button
