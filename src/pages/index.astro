@@ -18,10 +18,10 @@ import FAQ from "../components/FAQ.astro";
     <!-- Seccion Sobre Nosotros -->
     <section
       id="nosotros"
-      class="py-24 bg-slate-950 text-white relative overflow-hidden"
+      class="py-24 relative overflow-hidden bg-surface md:bg-slate-950 text-body md:text-white transition-colors duration-300 dark:text-white"
     >
-      <!-- Background Video with Blur and Dark Overlay -->
-      <div class="absolute inset-0 z-0">
+      <!-- Background Video with Blur and Dark Overlay, hidden on mobile -->
+      <div class="absolute inset-0 z-0 hidden md:block">
         <video
           autoplay
           muted
