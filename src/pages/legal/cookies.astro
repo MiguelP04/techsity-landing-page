@@ -21,18 +21,18 @@ const sections = [
 ---
 
 <LegalLayout title="Política de Cookies" sections={sections}>
-  <div class="space-y-8 sm:space-y-14 text-sm text-slate-700 leading-relaxed">
+  <div class="space-y-8 sm:space-y-14 text-sm text-body leading-relaxed">
     <div
-      class="relative bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/60 rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
+      class="relative bg-linear-to-br bg-surface-card/50 border border-border rounded-2xl p-6 pl-8 flex gap-4 overflow-hidden"
     >
       <div class="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-2xl">
       </div>
-      <Cookie class="size-7 text-green-600 shrink-0 mt-0.5" strokeWidth="2" />
+      <Cookie class="size-7 text-primary shrink-0 mt-0.5" strokeWidth="2" />
       <div>
-        <p class="font-bold text-green-800 mb-1">
+        <p class="font-bold text-primary mb-1">
           Usamos muy pocas cookies y lo explicamos sin tecnicismos
         </p>
-        <p class="text-green-700 leading-relaxed">
+        <p class="text-body leading-relaxed">
           El sitio web de Techsity Solutions (<strong>techsity.com</strong>)
           utiliza únicamente cookies técnicas esenciales para su funcionamiento.
           No instalamos cookies de seguimiento ni de publicidad. Esta política
@@ -43,27 +43,27 @@ const sections = [
 
     <!-- 1 -->
     <section id="que-son" class="scroll-mt-24 space-y-4">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >1</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           ¿Qué son las Cookies?
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-3"
         >
-          <p class="text-slate-600">
+          <p class="text-body">
             Las cookies son pequeños archivos de texto que un sitio web almacena
             en tu dispositivo (computadora, tablet o teléfono) cuando lo
             visitas. Tienen una función similar a la memoria a corto plazo de
             una web: le permiten recordar información para mejorar tu
             experiencia.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Según su origen, existen dos tipos: las cookies <strong
               >propias</strong
             > (establecidas directamente por el sitio que visitas) y las de <strong
@@ -73,7 +73,7 @@ const sections = [
             ser <strong>de sesión</strong> (se eliminan al cerrar el navegador) o
             <strong>persistentes</strong> (se mantienen por un tiempo determinado).
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             La legislación venezolana e internacional exige que los sitios web
             informen a sus usuarios sobre las cookies que utilizan y les den la
             opción de gestionarlas. Esta política cumple ese requisito.
@@ -97,63 +97,63 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 2 -->
     <section id="cookies-que-usamos" class="scroll-mt-24 space-y-4">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >2</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Cookies que Usamos
         </h2>
       </div>
-      <p class="text-slate-600">
+      <p class="text-body">
         A continuación, la lista completa y detallada de las cookies instaladas
         directamente por nuestro sitio:
       </p>
 
-      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+      <div class="overflow-x-auto rounded-xl bg-surface-card border border-border shadow-sm">
         <table class="w-full text-sm">
           <thead>
-            <tr class="bg-secondary text-white">
+            <tr class="bg-secondary text-slate-300">
               <th class="text-left px-5 py-3 font-semibold">Nombre</th>
               <th class="text-left px-5 py-3 font-semibold">Tipo</th>
               <th class="text-left px-5 py-3 font-semibold">Duración</th>
               <th class="text-left px-5 py-3 font-semibold">Finalidad</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-100">
-            <tr class="hover:bg-gray-50">
-              <td class="px-5 py-4 font-mono text-xs font-medium text-slate-700"
+          <tbody class="divide-y divide-border">
+            <tr class="hover:bg-surface-card filter brightness-95 dark:brightness-110">
+              <td class="px-5 py-4 font-mono text-xs font-medium text-heading"
                 >_session_id</td
               >
               <td class="px-5 py-4"
                 ><span
-                  class="bg-green-100 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full"
+                  class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium px-2 py-0.5 rounded-full"
                   >Esencial</span
                 ></td
               >
-              <td class="px-5 py-4 text-slate-600">Sesión</td>
-              <td class="px-5 py-4 text-slate-600"
+              <td class="px-5 py-4 text-body">Sesión</td>
+              <td class="px-5 py-4 text-body"
                 >Mantiene la sesión activa y el funcionamiento básico del
                 formulario de contacto mientras navegas.</td
               >
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-5 py-4 font-mono text-xs font-medium text-slate-700"
+            <tr class="hover:bg-surface-card filter brightness-95 dark:brightness-110">
+              <td class="px-5 py-4 font-mono text-xs font-medium text-heading"
                 >_csrf_token</td
               >
               <td class="px-5 py-4"
                 ><span
-                  class="bg-green-100 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full"
+                  class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium px-2 py-0.5 rounded-full"
                   >Esencial</span
                 ></td
               >
-              <td class="px-5 py-4 text-slate-600">Sesión</td>
-              <td class="px-5 py-4 text-slate-600"
+              <td class="px-5 py-4 text-body">Sesión</td>
+              <td class="px-5 py-4 text-body"
                 >Protege el formulario de contacto contra ataques CSRF
                 (Cross-Site Request Forgery), garantizando que las solicitudes
                 provienen de nuestro sitio.</td
@@ -164,14 +164,14 @@ const sections = [
       </div>
 
       <div
-        class="bg-green-50 border border-green-200 rounded-xl p-4 flex items-start gap-3"
+        class="bg-green-50/50 dark:bg-green-900/10 border border-green-200 dark:border-green-900/30 rounded-xl p-4 flex items-start gap-3"
       >
-        <CheckCircle class="size-6 text-green-600 shrink-0" strokeWidth="2.5" />
+        <CheckCircle class="size-6 text-green-600 dark:text-green-500 shrink-0" strokeWidth="2.5" />
         <div>
-          <p class="font-semibold text-green-800 text-sm mb-1">
+          <p class="font-semibold text-green-800 dark:text-green-400 text-sm mb-1">
             Sin cookies de marketing ni analítica
           </p>
-          <p class="text-green-700 text-sm">
+          <p class="text-body text-sm">
             Este sitio no utiliza Google Analytics, Facebook Pixel, cookies de
             retargeting ni ninguna cookie de seguimiento publicitario. No
             creamos perfiles de comportamiento de nuestros visitantes.
@@ -180,44 +180,44 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 3 -->
     <section id="terceros" class="scroll-mt-24 space-y-4">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >3</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Cookies y Recursos de Terceros
         </h2>
       </div>
-      <p class="text-slate-600">
+      <p class="text-body">
         Aunque no instalamos cookies de analítica o publicidad, nuestro sitio
         carga recursos de servicios externos que pueden establecer sus propias
         cookies o registrar datos técnicos de la conexión:
       </p>
 
       <div class="space-y-4">
-        <div class="bg-white border border-gray-200 rounded-xl p-5">
+        <div class="bg-surface-card border border-border rounded-xl p-5">
           <div class="flex items-center gap-3 mb-3">
-            <Type class="size-6 text-slate-700" strokeWidth="2" />
+            <Type class="size-6 text-heading" strokeWidth="2" />
             <div>
-              <p class="font-semibold text-slate-700">Google Fonts</p>
-              <p class="text-xs text-slate-500">
+              <p class="font-semibold text-heading">Google Fonts</p>
+              <p class="text-xs text-muted">
                 Tipografía — fonts.googleapis.com
               </p>
             </div>
           </div>
-          <p class="text-slate-600 mb-2">
+          <p class="text-body mb-2">
             Cargamos la fuente tipográfica <strong>Inter</strong> desde los servidores
             de Google para garantizar una presentación visual consistente. Al cargar
             esta fuente, los servidores de Google pueden registrar técnicamente: tu
             dirección IP, los encabezados del navegador (user-agent, referrer), la
             fuente solicitada y la fecha/hora de la solicitud.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Este intercambio de datos se rige por la <a
               href="https://policies.google.com/privacy"
               target="_blank"
@@ -225,23 +225,23 @@ const sections = [
               class="text-primary hover:underline"
               >Política de Privacidad de Google</a
             >. Para evitar esta transferencia de datos, puedes bloquear el
-            dominio <code class="bg-gray-100 px-1 rounded text-xs"
+            dominio <code class="bg-surface-alt px-1 rounded text-xs"
               >fonts.googleapis.com</code
             > desde las opciones de tu navegador o con una extensión como uBlock Origin.
           </p>
         </div>
 
-        <div class="bg-white border border-gray-200 rounded-xl p-5">
+        <div class="bg-surface-card border border-border rounded-xl p-5">
           <div class="flex items-center gap-3 mb-3">
-            <Mail class="size-6 text-slate-700" strokeWidth="2" />
+            <Mail class="size-6 text-heading" strokeWidth="2" />
             <div>
-              <p class="font-semibold text-slate-700">EmailJS</p>
-              <p class="text-xs text-slate-500">
+              <p class="font-semibold text-heading">EmailJS</p>
+              <p class="text-xs text-muted">
                 Servicio de envío de formularios — emailjs.com
               </p>
             </div>
           </div>
-          <p class="text-slate-600 mb-2">
+          <p class="text-body mb-2">
             El formulario de contacto de nuestro sitio utiliza <strong
               >EmailJS</strong
             > para enviar tu mensaje a nuestra bandeja de entrada sin necesidad de
@@ -249,7 +249,7 @@ const sections = [
             (nombre, correo, mensaje) son procesados temporalmente por los servidores
             de EmailJS para entregar el correo.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             EmailJS no almacena el contenido de tus mensajes más allá del tiempo
             necesario para la entrega. Para más información, consulta la <a
               href="https://www.emailjs.com/legal/privacy-policy/"
@@ -264,12 +264,12 @@ const sections = [
 
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5"
         >
-          <p class="font-semibold text-slate-700 mb-2">
+          <p class="font-semibold text-heading mb-2">
             ¿Por qué usar estos servicios?
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Usar Google Fonts y EmailJS nos permite entregar nuestro sitio de
             forma más eficiente, sin cargar tipografías pesadas localmente ni
             mantener un servidor de correo propio. Elegimos servicios
@@ -286,7 +286,7 @@ const sections = [
             <MessageCircle class="size-3.5" strokeWidth="2.5" />
             En pocas palabras
           </p>
-          <p>
+          <p class="text-body">
             Google Fonts y EmailJS son herramientas externas que usamos para
             mostrar bien el sitio y recibir mensajes. Pueden registrar tu IP
             cuando los usan, pero no son nuestras cookies de seguimiento.
@@ -295,20 +295,20 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 4 -->
     <section id="gestion" class="scroll-mt-24 space-y-4">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >4</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           ¿Cómo Gestionar o Eliminar las Cookies?
         </h2>
       </div>
-      <p class="text-slate-600">
+      <p class="text-body">
         Puedes configurar tu navegador para que te avise antes de aceptar
         cookies, para que rechace todas o algunas, o para eliminar las que ya
         tienes guardadas. Ten en cuenta que desactivar ciertas cookies
@@ -377,12 +377,12 @@ const sections = [
               ],
             },
           ].map(({ name, url, steps }) => (
-            <div class="bg-white border border-gray-200 rounded-xl p-5 hover:border-primary/30 transition-colors">
-              <p class="font-semibold text-slate-700 text-sm mb-3">{name}</p>
-              <ol class="text-xs text-slate-500 space-y-1 mb-3">
+            <div class="bg-surface-card border border-border rounded-xl p-5 hover:border-primary/30 transition-colors">
+              <p class="font-semibold text-heading text-sm mb-3">{name}</p>
+              <ol class="text-xs text-muted space-y-1 mb-3">
                 {steps.map((step, i) => (
                   <li class="flex items-start gap-1">
-                    <span class="shrink-0 font-medium text-slate-400">
+                    <span class="shrink-0 font-medium text-body-secondary">
                       {i + 1}.
                     </span>
                     <span>{step}</span>
@@ -403,37 +403,37 @@ const sections = [
       </div>
     </section>
 
-    <hr class="border-gray-100" />
+    <hr class="border-border" />
 
     <!-- 5 -->
     <section id="actualizaciones" class="scroll-mt-24 space-y-4">
-      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-3 mb-5 pb-4 border-b border-border">
         <span
           class="bg-secondary text-white text-xs font-bold w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
           >5</span
         >
-        <h2 class="text-xl font-bold text-slate-800 tracking-tight">
+        <h2 class="text-xl font-bold text-heading tracking-tight">
           Actualizaciones de Esta Política
         </h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <div
-          class="md:col-span-3 bg-white border border-gray-200 rounded-xl p-5 space-y-3"
+          class="md:col-span-3 bg-surface-card border border-border rounded-xl p-5 space-y-3"
         >
-          <p class="text-slate-600">
+          <p class="text-body">
             Techsity Solutions puede actualizar esta Política de Cookies en
             cualquier momento para reflejar cambios en la legislación vigente,
             en los servicios que utilizamos o en las prácticas del sector.
             Publicaremos la versión actualizada en esta misma página con la
             fecha de la última modificación claramente visible en el encabezado.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Te recomendamos revisar esta página periódicamente si deseas
             mantenerte informado. El uso continuado del sitio después de una
             actualización implica la aceptación de la nueva versión de la
             política.
           </p>
-          <p class="text-slate-600">
+          <p class="text-body">
             Si los cambios son materialmente significativos (como la
             introducción de nuevas cookies de seguimiento), lo comunicaremos de
             forma más prominente, por ejemplo mediante un banner de notificación
@@ -449,7 +449,7 @@ const sections = [
             <MessageCircle class="size-3.5" strokeWidth="2.5" />
             En pocas palabras
           </p>
-          <p>
+          <p class="text-body">
             Si cambia algo importante sobre cómo usamos cookies, lo
             notificaremos claramente. Consultar esta página de vez en cuando es
             la mejor forma de estar al día.
@@ -460,7 +460,7 @@ const sections = [
 
     <!-- CTA -->
     <div
-      class="relative bg-gradient-to-br from-secondary to-accent rounded-2xl p-8 text-center text-white overflow-hidden"
+      class="relative bg-linear-to-br from-secondary to-accent rounded-2xl p-8 text-center text-white overflow-hidden"
     >
       <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full">
       </div>

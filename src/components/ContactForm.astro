@@ -4,7 +4,7 @@
 
 <section
   id="contacto"
-  class="py-24 bg-linear-to-br from-gray-50 to-gray-100 relative overflow-hidden"
+  class="py-24 bg-linear-to-br from-surface to-surface-alt relative overflow-hidden"
 >
   <!-- Background decorative elements -->
   <div class="absolute inset-0 opacity-5">
@@ -21,11 +21,11 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Header -->
     <div class="text-center mb-12 overflow-hidden">
-      <h2 class="text-4xl font-bold text-secondary mb-4 reveal slide-left">
+      <h2 class="text-4xl font-bold text-heading mb-4 reveal slide-left">
         ¿Listo para transformar tu negocio?
       </h2>
       <p
-        class="text-xl text-paragraph max-w-2xl mx-auto reveal slide-right delay-200"
+        class="text-xl text-body max-w-2xl mx-auto reveal slide-right delay-200"
       >
         Completa el formulario y recibe una propuesta personalizada en menos de
         24 horas. Sin compromisos, 100% gratis.
@@ -34,14 +34,14 @@
 
     <!-- Form Container -->
     <div
-      class="bg-white rounded-2xl shadow-2xl shadow-primary/10 p-8 md:p-12 reveal slide-up delay-100"
+      class="bg-surface-card rounded-2xl shadow-2xl shadow-primary/10 p-8 md:p-12 reveal slide-up delay-100"
     >
       <form id="contact-form" class="space-y-6">
         <!-- Nombre o Nombre de Empresa -->
         <div class="form-group">
           <label
             for="nombre"
-            class="block text-sm font-semibold text-secondary mb-2"
+            class="block text-sm font-semibold text-heading mb-2"
           >
             Nombre o Nombre de Empresa <span class="text-primary">*</span>
           </label>
@@ -51,7 +51,8 @@
             name="nombre"
             required
             minlength="3"
-            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+            class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-surface-card text-heading"
+            style="border-color: var(--color-border-input);"
             placeholder="Juan Pérez o TechCorp Solutions"
           />
           <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
@@ -63,7 +64,7 @@
           <div class="form-group">
             <label
               for="email"
-              class="block text-sm font-semibold text-secondary mb-2"
+              class="block text-sm font-semibold text-heading mb-2"
             >
               Email <span class="text-primary">*</span>
             </label>
@@ -72,7 +73,8 @@
               id="email"
               name="email"
               required
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+              class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-surface-card text-heading"
+              style="border-color: var(--color-border-input);"
               placeholder="juan@ejemplo.com"
             />
             <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
@@ -82,15 +84,16 @@
           <div class="form-group">
             <label
               for="telefono"
-              class="block text-sm font-semibold text-secondary mb-2"
+              class="block text-sm font-semibold text-heading mb-2"
             >
-              Teléfono <span class="text-gray-400 text-xs">(opcional)</span>
+              Teléfono <span class="text-muted text-xs">(opcional)</span>
             </label>
             <input
               type="tel"
               id="telefono"
               name="telefono"
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+              class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-surface-card text-heading"
+              style="border-color: var(--color-border-input);"
               placeholder="+58 412-1234567"
             />
             <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
@@ -103,7 +106,7 @@
           <div class="form-group">
             <label
               for="tipoServicio"
-              class="block text-sm font-semibold text-secondary mb-2"
+              class="block text-sm font-semibold text-heading mb-2"
             >
               Tipo de Servicio <span class="text-primary">*</span>
             </label>
@@ -111,7 +114,8 @@
               id="tipoServicio"
               name="tipoServicio"
               required
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-white"
+              class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-surface-card text-heading"
+              style="border-color: var(--color-border-input);"
             >
               <option value="">Selecciona una opción</option>
               <option value="desarrollo-web"
@@ -142,7 +146,7 @@
           <div class="form-group">
             <label
               for="presupuesto"
-              class="block text-sm font-semibold text-secondary mb-2"
+              class="block text-sm font-semibold text-heading mb-2"
             >
               Presupuesto Estimado (USD) <span class="text-primary">*</span>
             </label>
@@ -158,11 +162,12 @@
                 required
                 min="100"
                 step="1"
-                class="w-full pl-8 pr-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-surface-card text-heading"
+                style="border-color: var(--color-border-input);"
                 placeholder="1000"
               />
             </div>
-            <p id="presupuesto-hint" class="text-xs text-gray-500 mt-1">
+            <p id="presupuesto-hint" class="text-xs text-muted mt-1">
               Presupuesto mínimo: $100 USD
             </p>
             <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
@@ -175,16 +180,15 @@
           <div class="form-group">
             <label
               for="plazo"
-              class="block text-sm font-semibold text-secondary mb-2"
+              class="block text-sm font-semibold text-heading mb-2"
             >
-              Plazo Estimado <span class="text-gray-400 text-xs"
-                >(opcional)</span
-              >
+              Plazo Estimado <span class="text-muted text-xs">(opcional)</span>
             </label>
             <select
               id="plazo"
               name="plazo"
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-white"
+              class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-surface-card text-heading"
+              style="border-color: var(--color-border-input);"
             >
               <option value="">Selecciona un plazo</option>
               <option value="urgente">Urgente (menos de 1 mes)</option>
@@ -200,15 +204,16 @@
           <div class="form-group">
             <label
               for="sitioWeb"
-              class="block text-sm font-semibold text-secondary mb-2"
+              class="block text-sm font-semibold text-heading mb-2"
             >
-              Sitio Web <span class="text-gray-400 text-xs">(opcional)</span>
+              Sitio Web <span class="text-muted text-xs">(opcional)</span>
             </label>
             <input
               type="url"
               id="sitioWeb"
               name="sitioWeb"
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+              class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none bg-surface-card text-heading"
+              style="border-color: var(--color-border-input);"
               placeholder="https://www.ejemplo.com"
             />
             <span class="error-message text-sm text-red-500 mt-1 hidden"></span>
@@ -219,7 +224,7 @@
         <div class="form-group">
           <label
             for="mensaje"
-            class="block text-sm font-semibold text-secondary mb-2"
+            class="block text-sm font-semibold text-heading mb-2"
           >
             Cuéntanos sobre tu proyecto <span class="text-primary">*</span>
           </label>
@@ -230,7 +235,8 @@
             minlength="10"
             maxlength="500"
             rows="5"
-            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none"
+            class="w-full px-4 py-3 rounded-lg border focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none bg-surface-card text-heading"
+            style="border-color: var(--color-border-input);"
             placeholder="Describe brevemente qué necesitas, tus objetivos y cualquier detalle relevante..."
           ></textarea>
           <div class="flex justify-between items-center mt-1">
@@ -334,9 +340,7 @@
     </div>
 
     <!-- Contact Info alternativa -->
-    <div
-      class="mt-8 text-center text-sm text-gray-600 reveal fade-in delay-200"
-    >
+    <div class="mt-8 text-center text-sm text-body reveal fade-in delay-200">
       <p>
         ¿Prefieres contactarnos directamente? Escríbenos a <a
           href="mailto:techsitysolutions@gmail.com"
